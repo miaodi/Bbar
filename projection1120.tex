@@ -457,7 +457,7 @@ where
 \end{align}
 and $\A$ is the standard finite element assembly operator \cite{hughes_finite_2012}. We note that the assembly of $\bar{\mathbf{K}}^s$ requires the assembly of two intermediate matrices, $\bar{\mathbf{M}}$ and $\replaced{\hat{\mathbf{P}}}{\mathbf{P}}$. The computation of these matrices is needed because the product of two integrals over the entire domain can not be localized to the element level.
 \subsection{Non-symmetric \Bezier $\bar{B}$ projection}
-\added{The relationship of $\bar{B}$-formulation with mixed formulations has been studied and proved to be equivalent by Simo and Hughes \cite{hughes_variational_1986}. However, the symmetric \Bezier $\bar{B}$ projection lacks the connection to the mixed formulation. For this reason, instead of considering $\bar{B}$ formulation as a strain projection method, we regard it as a mixed formulation with the auxiliary variable ( the shear stress for the case of Timoshenko beam) being eliminated and use the \Bezier dual basis functions as the test functions of the auxiliary variable. Since the resulting stiffness matrix is not symmetric, this formulation is refered to as non-symmetric \Bezier $\bar{B}$ projection.}
+\added{The relationship of $\bar{B}$-formulation with mixed formulations has been studied and proved to be equivalent by Simo and Hughes \cite{hughes_variational_1986}. However, the symmetric \Bezier $\bar{B}$ projection lacks the connection to the mixed formulation. For this reason, instead of considering $\bar{B}$ formulation as a strain projection method, we regard it as a mixed formulation with the auxiliary variable ( the shear stress for the case of Timoshenko beam) being eliminated. Owing to the dual basis formulation of \Bezier projection operator, we use the \Bezier dual basis functions as the test functions of the auxiliary variable. Since the resulting stiffness matrix is not symmetric, this formulation is refered to as non-symmetric \Bezier $\bar{B}$ projection.}
 \subsubsection{The weak form}
 \added{In the mixed formulation, the shear stress $\tau=sGA\gamma$ is taken as a new independent variable. The weak form of the mixed formulation is then of the following form: find $\mathbf{u}\in{\mathcal{S}(\Omega)}$ and $\tau\in{L}^2(\Omega)$ such that for all $\mathbf{w}\in{\mathcal{V}(\Omega)}$ and $\delta\tau\in{L}^2(\Omega)$}
 \begin{align}
@@ -956,9 +956,9 @@ Convergence plots for the relative error of the displacement and energy in the $
 \begin{figure}[h]
     \center
 \begin{tabular}{ccc}
-\includegraphics[width=.33\linewidth]{deformation_p_2} & \includegraphics[width=.33\linewidth]{deformation_p_3} & \includegraphics[width=.33\linewidth]{deformation_p_4}\\
-\includegraphics[width=.33\linewidth]{stress_p_2} & \includegraphics[width=.33\linewidth]{stress_p_3} & \includegraphics[width=.33\linewidth]{stress_p_4}\\
-\includegraphics[width=.33\linewidth]{energy_p_2} & \includegraphics[width=.33\linewidth]{energy_p_3} & \includegraphics[width=.33\linewidth]{energy_p_4}
+\includegraphics[width=.31\linewidth]{deformation_p_2} & \includegraphics[width=.31\linewidth]{deformation_p_3} & \includegraphics[width=.31\linewidth]{deformation_p_4}\\
+\includegraphics[width=.31\linewidth]{stress_p_2} & \includegraphics[width=.31\linewidth]{stress_p_3} & \includegraphics[width=.31\linewidth]{stress_p_4}\\
+\includegraphics[width=.31\linewidth]{energy_p_2} & \includegraphics[width=.31\linewidth]{energy_p_3} & \includegraphics[width=.31\linewidth]{energy_p_4}
 \end{tabular}
     \caption{Convergence study of the plate with a circular hole. The relative $L^2$ error of displacement, stress and the relative error in energy norm with respect to mesh refinement.}
 	\label{fig:platewithhole_convergence}
