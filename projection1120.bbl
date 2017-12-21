@@ -157,11 +157,11 @@ R.~Bouclier, T.~Elguedj, A.~Combescure, Locking free isogeometric formulations
 
 \bibitem{kiendl_isogeometric_2009}
 J.~Kiendl, K.~U. Bletzinger, J.~Linhard, R.~W\"{u}chner, Isogeometric shell
-  analysis with {K}irchhoff--{??L}ove elements, Computer Methods in Applied
+  analysis with {K}irchhoff--{L}ove elements, Computer Methods in Applied
   Mechanics and Engineering 198~(49) (2009) 3902--3914.
 
 \bibitem{kiendl_isogeometric_2015}
-M.~C. Kiendl, J.and~Hsu, M.~Wu, A.~Reali, Isogeometric {K}irchhoff--{??L}ove
+M.~C. Kiendl, J.and~Hsu, M.~Wu, A.~Reali, Isogeometric {K}irchhoff--{L}ove
   shell formulations for general hyperelastic materials, Computer Methods in
   Applied Mechanics and Engineering 291 (2015) 280--303.
 
@@ -220,13 +220,13 @@ S.~Govindjee, J.~Strain, T.~J. Mitchell, R.~L. Taylor, Convergence of an
   Computer Methods in Applied Mechanics and Engineering 213 (2012) 84--92.
 
 \bibitem{hughes_finite_2012}
-T.~J. Hughes, The finite element method: {L}inear static and dynamic finite
+T.~J.~R. Hughes, The finite element method: {L}inear static and dynamic finite
   element analysis, Dover, 2000.
 
 \bibitem{kiendl_single-variable_2015}
-J.~Kiendl, F.~Auricchio, T.~Hughes, A.~Reali, Single-variable formulations and
-  isogeometric discretizations for shear deformable beams, Computer Methods in
-  Applied Mechanics and Engineering 284 (2015) 988--1004.
+J.~Kiendl, F.~Auricchio, T.~J.~R. Hughes, A.~Reali, Single-variable
+  formulations and isogeometric discretizations for shear deformable beams,
+  Computer Methods in Applied Mechanics and Engineering 284 (2015) 988--1004.
 
 \bibitem{chapelle_inf-sup_1993}
 D.~Chapelle, K.~J. Bathe, The inf-sup test, Computers \& Structures 47~(4)  537
