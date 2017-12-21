@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex projection1120"] 1513800874 "projection1120.aux" "projection1120.bbl" "projection1120" 1513882010
+["bibtex projection1120"] 1513800874 "projection1120.aux" "projection1120.bbl" "projection1120" 1513882464
   "./elsarticle-num.bst" 1513027058 30001 6fb47de13cacd52e2c80466b180be262 ""
   "bibliography.bib" 1513582605 16430 50dcc8addd8fbbc44834469623e3525d ""
-  "projection1120.aux" 1513882009 23007 81699280fa88e79b4be5587151495f2c ""
+  "projection1120.aux" 1513882463 23007 81699280fa88e79b4be5587151495f2c ""
   (generated)
   "projection1120.bbl"
   "projection1120.blg"
-["pdflatex"] 1513882008 "/Users/dimiao/Desktop/Bbar/projection1120.tex" "projection1120.pdf" "projection1120" 1513882010
+["pdflatex"] 1513882462 "/Users/dimiao/Desktop/Bbar/projection1120.tex" "projection1120.pdf" "projection1120" 1513882464
   "/Users/dimiao/Desktop/Bbar/projection1120.tex" 1513800872 72530 9d23628a784dd704939b4aecc349e9dc ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -289,7 +289,7 @@
   "M-sin.pdf" 1513632026 60545 ff7f0be51b47038074977ea76fb3f2e3 ""
   "NS-LB_extraction.pdf" 1513190522 1497 a10e39de8272deaf8d6c6d5f76b7000a ""
   "Platewithhole.pdf" 1513027058 25231 24b4f424a9f7f1a1fe0ae05b384dbd42 ""
-  "Platewithhole_b.pdf" 1513027058 34116 9ea64e0f02765f50a76caf040fcef7a7 ""
+  "Platewithhole_b.pdf" 1513882336 34117 3bc700457951cae30a6c65d0f20668e0 ""
   "Q-sin.pdf" 1513631924 59534 c12b675fb5552fad4eaa89af916ea338 ""
   "annular.pdf" 1513605817 25668 5985d0de74b4c584960c2726d426d48a ""
   "basis_dual.pdf" 1513027058 49823 7dae27fa4ade22d2a6535ca9b084f4c4 ""
@@ -327,7 +327,7 @@
   "no_stress_contour.pdf" 1513747208 61710 b411a9d619d79c501834bb27df2076a8 ""
   "ns_stress_contour.pdf" 1513747194 70948 d822e5b6e6505799385430e18e944fe0 ""
   "phi-sin.pdf" 1513632014 59266 89a619205fd1e08a3d959ab39f81a4d0 ""
-  "projection1120.aux" 1513882009 23007 81699280fa88e79b4be5587151495f2c ""
+  "projection1120.aux" 1513882463 23007 81699280fa88e79b4be5587151495f2c ""
   "projection1120.bbl" 1513800874 10884 105efbd68dd611bc4dd076292296ea8d "bibtex projection1120"
   "projection1120.tex" 1513800872 72530 9d23628a784dd704939b4aecc349e9dc ""
   "reference_stress_contour.pdf" 1513747165 70965 aff5c0234abe2edd99976a959beae80a ""
@@ -344,7 +344,7 @@
   "w-sin.pdf" 1513631983 59411 fb4816be998ad9c6a80353c4ddae6684 ""
   "weights.pdf" 1513027058 16911 9fa771276a111a3f749278cc96bd6cd4 ""
   (generated)
-  "projection1120.pdf"
+  "projection1120.soc"
   "projection1120.log"
   "projection1120.aux"
-  "projection1120.soc"
+  "projection1120.pdf"
