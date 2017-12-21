@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex projection1120"] 1513800874 "projection1120.aux" "projection1120.bbl" "projection1120" 1513800876
+["bibtex projection1120"] 1513800874 "projection1120.aux" "projection1120.bbl" "projection1120" 1513882010
   "./elsarticle-num.bst" 1513027058 30001 6fb47de13cacd52e2c80466b180be262 ""
   "bibliography.bib" 1513582605 16430 50dcc8addd8fbbc44834469623e3525d ""
-  "projection1120.aux" 1513800875 23007 81699280fa88e79b4be5587151495f2c ""
+  "projection1120.aux" 1513882009 23007 81699280fa88e79b4be5587151495f2c ""
   (generated)
-  "projection1120.blg"
   "projection1120.bbl"
-["pdflatex"] 1513800874 "/Users/dimiao/Desktop/Bbar/projection1120.tex" "projection1120.pdf" "projection1120" 1513800876
+  "projection1120.blg"
+["pdflatex"] 1513882008 "/Users/dimiao/Desktop/Bbar/projection1120.tex" "projection1120.pdf" "projection1120" 1513882010
   "/Users/dimiao/Desktop/Bbar/projection1120.tex" 1513800872 72530 9d23628a784dd704939b4aecc349e9dc ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -319,15 +319,15 @@
   "mesh_cook_2.pdf" 1513027058 4797 9002828bf831df0670817fbb3a13e062 ""
   "mesh_cook_3.pdf" 1513027058 9412 a35e3217047440fdfeacb859f54b0050 ""
   "mesh_cook_4.pdf" 1513027058 22233 d8e46a1966da5cd877d2ddba4fe6d012 ""
-  "mesh_hole_0.pdf" 1513027058 1128 e14034c819daba7682236c8603865392 ""
-  "mesh_hole_1.pdf" 1513027058 2786 c01b2160fa65d699d82d830edbff033d ""
-  "mesh_hole_2.pdf" 1513027058 6266 25724b438e3fc9508165a79c36430876 ""
-  "mesh_hole_3.pdf" 1513027058 13420 a5b2a01f89aa2ebe3b34a4e4a7023d9b ""
-  "mesh_hole_4.pdf" 1513027058 27580 8ef62b96465307ce599ed48630120c9e ""
+  "mesh_hole_0.pdf" 1513881080 1158 88ec0aa26f07508ac8877c128208ad56 ""
+  "mesh_hole_1.pdf" 1513881648 2033 bebd67ff4ea0f7cb22da355833af9a41 ""
+  "mesh_hole_2.pdf" 1513881716 3866 3f3421e4e2595daa70fbb138a5af4390 ""
+  "mesh_hole_3.pdf" 1513881785 7498 ed848bff36ca62386feb9a8021cc7fd7 ""
+  "mesh_hole_4.pdf" 1513881968 14745 a798124cd16908f5107f6813b521eeb4 ""
   "no_stress_contour.pdf" 1513747208 61710 b411a9d619d79c501834bb27df2076a8 ""
   "ns_stress_contour.pdf" 1513747194 70948 d822e5b6e6505799385430e18e944fe0 ""
   "phi-sin.pdf" 1513632014 59266 89a619205fd1e08a3d959ab39f81a4d0 ""
-  "projection1120.aux" 1513800875 23007 81699280fa88e79b4be5587151495f2c ""
+  "projection1120.aux" 1513882009 23007 81699280fa88e79b4be5587151495f2c ""
   "projection1120.bbl" 1513800874 10884 105efbd68dd611bc4dd076292296ea8d "bibtex projection1120"
   "projection1120.tex" 1513800872 72530 9d23628a784dd704939b4aecc349e9dc ""
   "reference_stress_contour.pdf" 1513747165 70965 aff5c0234abe2edd99976a959beae80a ""
@@ -344,7 +344,7 @@
   "w-sin.pdf" 1513631983 59411 fb4816be998ad9c6a80353c4ddae6684 ""
   "weights.pdf" 1513027058 16911 9fa771276a111a3f749278cc96bd6cd4 ""
   (generated)
-  "projection1120.aux"
   "projection1120.pdf"
   "projection1120.log"
+  "projection1120.aux"
   "projection1120.soc"
