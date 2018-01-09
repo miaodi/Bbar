@@ -742,7 +742,7 @@ where
     b\langle{\mathbf{w},p}\rangle&=\int_{\Omega}\epsilon_{ii}(\mathbf{w})pd\Omega.
 \end{align}
 
-\subsubsection{Discretization}
+\subsubsection{\added{Discretization}}
 
 Following the same pattern of non-symmetric \Bezier $\bar{B}$ in Timoshenko beam problem, we keep the discretization of $\mathbf{u}$ and $\mathbf{w}$ untouched, while use lower order spline basis functions and corresponding dual basis functions for the discretization of pressure $p$ and its variation $\delta{p}$, respectively. The discretized stiffness matrix in mixed form can be written as
 \begin{equation}
@@ -772,7 +772,7 @@ where
 \subsection{Numerical results}
 We investigate the performance of the B\'{e}zier $\bar{B}$ method for two nearly incompressible linear elasticity problems under plane strain conditions. \added{Previous to the examples, we numerically evaluate the inf–sup constant for global $\bar{B}$ and non-symmetric \Bezier $\bar{B}$ methods. For numerical examples,} we first study the Cook's membrane problem, which is discretized with B-spline basis functions, and in the second problem we model the infinite plate with a circular hole problem using NURBS. Results computed using standard finite elements are labeled $Q_1$, $Q_2$, $Q_3$, and $Q_4$. Results computed using a global $\bar{B}$ method are labeled $\mathcal{T}^{L^2}$ and those computed with the \added{symmetric} B\'ezier $\bar{B}$ method and the \added{non-symmetric B\'ezier $\bar{B}$ method} are labeled $S-\mathcal{T}^{P}$ and $NS-\mathcal{T}^{P}$, respectively.
 
-\subsubsection{Numerical evaluation of the inf-sup condition}
+\subsubsection{\added{Numerical evaluation of the inf-sup condition}}
 
 The inf-sup condition is also refered to as the Ladyzhenskaya-Babuska-Brezzi condition (or simply LBB). It is a crucial condition to ensure the solvability, stability and optimality of a mixed problem. For the nearly incompressible elasticity problem, the inf-sup condition is, for $\delta{p}\neq{0}$ and $\mathbf{u}\neq{0}$
 \begin{equation}
@@ -910,10 +910,28 @@ A comparison of the displacement of the top right corner with respect to the num
     \label{fig:mesh_cook}
 \end{figure}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=.8\linewidth]{Cook_s_membrane}
-   	\includegraphics[width=.8\linewidth]{Cook_s_membrane_zoomin}
+\begin{figure}[htb!]
+    \centering
+	\begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=.8\linewidth]{Cook's_membrane_Q1}
+    \end{subfigure}
+    %
+    \centering
+	\begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=.8\linewidth]{Cook's_membrane_Q2}
+    \end{subfigure}
+\end{figure}
+
+\begin{figure}[htb!]\ContinuedFloat
+    \centering
+    \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=.8\linewidth]{Cook's_membrane_Q3}
+    \end{subfigure}
+    %
+    \centering
+     \begin{subfigure}[b]{\textwidth}
+        \includegraphics[width=.8\linewidth]{Cook's_membrane_Q4}
+    \end{subfigure}
 	\caption{Cook's membrane: comparison of the vertical displacement at the top right corner for the different methods and degrees.}
 	\label{fig:Cook's_result}
 \end{figure}
@@ -953,7 +971,7 @@ The setup for the infinite plate with a circular hole problem is shown in Figure
 
 Convergence plots for the relative error of the displacement and energy in the $L^2$ norm are shown in Figure \ref{fig:platewithhole_convergence}. As can be seen, the standard $Q_p$ approximations suffer from severe volumetric locking for all orders while, on the other hand, the $\bar{B}$ methods remedy locking for all cases. \replaced{For the symmetric \Bezier $\bar{B}$ method, the optimality in all three measures has been obtained for biquadratic elements; the optimal energy convergence rate has been achieved for bicubic elements; however, the degradation of convergence rates in all three measures has been observed for biquartic elements. The can be attributed to the fact that the derivation of the symmetric \Bezier $\bar{B}$ method is purely based on the engineering analogy between the $L^2$ projection and \Bezier projection. On the other hand, the non-symmetric \Bezier $\bar{B}$ method, derived from the mixed formulation, is optimal for displacement, stress and energy for all elements with slightly higher errors than that of global $\bar{B}$ method, which agrees with the inf-sup test.}{For biquadratic elements, the \Bezier $\bar{B}$ method obtains optimal convergence rates for both the displacement and energy error, and the difference in the energy error between the global $\bar{B}$ and the B\'ezier $\bar{B}$ methods is indistinguishable. For bicubic and biquartic elements, the convergence rates of the B\'ezier $\bar{B}$ method for the energy error are optimal. The convergence rates of B\'ezier $\bar{B}$ method for the displacement error, however, are not optimal. This degradation in the rates can likely be attributed to the conditioning of the Bernstein basis and the element extraction operators.}\par
 
-\added{The contour plots of $\sigma_{xx}$ for bicubic elements of the third mesh are shown in Figure \ref{fig:platewithhole_contour}, $Q_3$ elements are severely locked while all $\bar{B}$ methods converge to the reference solution. }
+\added{The error contour plots of $\sigma_{xx}$ for biquartic elements of the fifth mesh are shown in Figure \ref{fig:platewithhole_contour}, $Q_4$ elements are severely locked while all $\bar{B}$ methods converge to the reference solution. }
 \begin{figure}[h]
     \center
 \begin{tabular}{ccc}
@@ -968,14 +986,12 @@ Convergence plots for the relative error of the displacement and energy in the $
 \begin{figure}[htb!]
     \center
     \begin{tabular}{cc}
-    \includegraphics[width=.4\linewidth]{no_stress_contour} & \includegraphics[width=.4\linewidth]{g_stress_contour}\\
-    $Q_3$ & $\mathcal{T}^{L^2} Q_3/Q_2$\\
-    \includegraphics[width=.4\linewidth]{s_stress_contour} & \includegraphics[width=.4\linewidth]{ns_stress_contour}\\
-    $S-\mathcal{T}^{p} Q_3/Q_2$ & $NS-\mathcal{T}^{p} Q_3/Q_2$\\
-    \includegraphics[width=.4\linewidth]{reference_stress_contour} & \includegraphics[width=.13\linewidth]{legend}\\
-    Exact & Legend
+    \includegraphics[width=.4\linewidth]{no} & \includegraphics[width=.4\linewidth]{g}\\
+    $Q_4$ & $\mathcal{T}^{L^2} Q_4/Q_3$\\
+    \includegraphics[width=.4\linewidth]{s} & \includegraphics[width=.4\linewidth]{ns}\\
+    $S-\mathcal{T}^{p} Q_4/Q_3$ & $NS-\mathcal{T}^{p} Q_4/Q_3$
     \end{tabular}
-        \caption{Contour plots of $\sigma_{xx}$ for the plate with a circular hole ($p=3$, the $3^{rd}$ mesh is used).}
+        \caption{Contour plots of $\vert{\sigma_{xx}-\sigma_{xx}^h}\vert$ for the plate with a circular hole ($p=4$, the $5^{th}$ mesh is used).}
         \label{fig:platewithhole_contour}
     \end{figure}
 \section{Conclusions}
