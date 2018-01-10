@@ -675,12 +675,12 @@ where $\boldsymbol{\varepsilon}^{vol}=\dfrac{1}{3}\mathrm{tr}(\boldsymbol{\varep
 \end{equation}
 The weak form can then be written as: find $\mathbf{u}\in{\mathcal{S}(\Omega)}$ such that for all $\mathbf{w}\in{\mathcal{V}(\Omega)}$
 \begin{equation}
-    \bar{a}\langle{\mathbf{w},\mathbf{u}}\rangle=\bar{l}\langle{\mathbf{u}}\rangle
+    \bar{a}\langle{\mathbf{w},\mathbf{u}}\rangle=\bar{l}\langle{\mathbf{w}}\rangle
 \end{equation}
 where
 \begin{align}
     \bar{a}\langle{\mathbf{w},\mathbf{u}}\rangle&=\int_{\Omega}\bar{\epsilon}_{ij}(\mathbf{w})c_{ijkl}\bar{\epsilon}_{kl}(\mathbf{u})d\Omega, \\
-    \bar{l}\langle{\mathbf{u}}\rangle&=\int_{\Omega}\mathbf{u}\cdot\mathbf{f}d\Omega+\int_{\Gamma_{h}}\mathbf{u}\cdot\mathbf{h}d\Gamma.
+    \bar{l}\langle{\mathbf{w}}\rangle&=\int_{\Omega}\mathbf{w}\cdot\mathbf{f}d\Omega+\int_{\Gamma_{h}}\mathbf{w}\cdot\mathbf{h}d\Gamma.
 \end{align}
 
 \subsubsection{Discretization}
