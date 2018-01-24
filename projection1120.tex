@@ -282,7 +282,7 @@ the algorithm proceeds as follows:
 
 \subsection{Dual basis formulation of B\'{e}zier projection}
 \label{sec:dual-funct-dual}
-To integrate \Bezier projection into a standard finite element assembly algorithm, it is convenient to recast \Bezier projection in terms of a dual basis. \added{It plays a key role in developing the non-symmetric \Bezier $\bar{B}$ method.} A dual basis has the distinguishing property that
+To integrate \Bezier projection into a standard finite element assembly algorithm, it is convenient to recast \Bezier projection in terms of a dual basis. \added{This approach plays a key role in developing the non-symmetric \Bezier $\bar{B}$ method discussed in Section~\ref{sec:non-symmetric}.} A dual basis has the distinguishing property that
 \begin{align}
   \int_{\Omega} \hat{N}_A N_B \, d\Omega = \delta_{AB}.
   \end{align}
@@ -388,7 +388,8 @@ where $\gamma$ is the shear strain, $\kappa$ is the bending strain, $\omega$ is 
 \end{figure}
 
 \subsection{Symmetric \Bezier $\bar{B}$ projection}
-{\color{blue}For the Timoshenko beam, the source of locking comes from the transverse shear. Hence, under the framework of $\bar{B}$ projection, the shear strain $\gamma$ is projected onto a lower order function space. The projected shear strain $\bar{\gamma}$ is used in solving the strain energy minimization problem. Here we use the \Bezier projection operator to obtain $\bar{\gamma}$, and refer to it as Symmetric \Bezier $\bar{B}$ projection, as the resulting stiffness matrix is symmetric.}
+\label{sec:symmetric-projection}
+{\color{blue}For the Timoshenko beam, it is the transverse shear that causes locking. Hence, under the framework of $\bar{B}$ projection, the shear strain $\gamma$ is projected onto a lower order function space. The projected shear strain $\bar{\gamma}$ is used when solving the strain energy minimization problem. Here we use the \Bezier projection operator to obtain $\bar{\gamma}$, and refer to it as the Symmetric \Bezier $\bar{B}$ projection method because the resulting stiffness matrix is symmetric.}
 
 \subsubsection{The weak form}
 
@@ -458,12 +459,14 @@ where
 \end{align}
 and $\A$ is the standard finite element assembly operator \cite{hughes_finite_2012}. We note that the assembly of $\bar{\mathbf{K}}^s$ requires the assembly of two intermediate matrices, $\bar{\mathbf{M}}$ and $\replaced{\hat{\mathbf{P}}}{\mathbf{P}}$. The computation of these matrices is needed because the product of two integrals over the entire domain can not be localized to the element level.
 \subsection{Non-symmetric \Bezier $\bar{B}$ projection}
-\added{The relationship of $\bar{B}$-formulation with mixed formulations has been studied and proved to be equivalent by Simo and Hughes \cite{hughes_variational_1986}. However, the symmetric \Bezier $\bar{B}$ projection lacks the connection to the mixed formulation. For this reason, instead of considering $\bar{B}$ formulation as a strain projection method, we regard it as a mixed formulation with the auxiliary variable (the shear stress for the case of Timoshenko beam) being eliminated. Taking the advantage of the dual basis formulation of \Bezier projection operator, we can incorporate \Bezier projection into the mixed formulation by using the \Bezier dual basis functions as the test functions of the auxiliary variable. Since the resulting stiffness matrix is not symmetric, this formulation is refered to as non-symmetric \Bezier $\bar{B}$ projection.}
+\label{sec:non-symmetric}
+
+\added{The relationship between $\bar{B}$-formulations and mixed formulations has been studied and it has been shown by Simo and Hughes \cite{hughes_variational_1986} that they are equivalent. However, the symmetric \Bezier $\bar{B}$ projection method presented in Section~\ref{sec:symmetric-projection}, where we started by considered the $\bar{B}$ formulation as a strain projection method, lacks this connection to mixed formulations (we will show this in the following section). In this section we present a second method based on \Bezier projection in which we view the $\bar{B}$ formulation as a mixed formulation with the auxiliary variable (the shear stress for the case of Timoshenko beam) being eliminated. Taking advantage of the dual basis formulation of the \Bezier projection operator we can incorporate \Bezier projection into the mixed formulation by using the \Bezier dual basis functions as the test functions of the auxiliary variable. Since the resulting stiffness matrix is not symmetric, this formulation is referred to as the non-symmetric \Bezier $\bar{B}$ projection method. Although this method does not preserve symmetry we will show that it does preserve convergence rates.}
 \subsubsection{The weak form}
 \added{In the mixed formulation, the shear stress $\tau=sGA\gamma$ is taken as a new independent variable. The weak form of the mixed formulation is then of the following form: find $\mathbf{u}\in{\mathcal{S}(\Omega)}$ and $\tau\in{L}^2(\Omega)$ such that for all $\mathbf{w}\in{\mathcal{V}(\Omega)}$ and $\delta\tau\in{L}^2(\Omega)$}
 \begin{align}
     \int_{0}^L\kappa(\mathbf{w})EI\kappa(\mathbf{u}) + {\gamma}(\mathbf{w})\tau \, dx&= l\langle{\mathbf{w}}\rangle\\
-    \int_{0}^L\delta\tau(sGA\gamma(\mathbf{u})-\tau) \, dx &= 0
+    \int_{0}^L\delta\tau(sGA\gamma(\mathbf{u})-\tau) \, dx &= 0.
 \end{align}
 \subsubsection{Discretization}
 \added{In the finite element formulation of the mixed form, the discretization of $\mathbf{u}$ and $\mathbf{w}$ remain the same. Since the shear strain and its variation are in $L^2(\Omega)$, their finite element approximation can be made from functions with poor regularity e.g. discontinuous polynomials. For consistency, if the field $\mathbf{u}$ is discretized by $p^{th}$ degree spline  basis functions defined by the knot vector \eqref{eq:origin_knot_vector}, the shear stress $\tau$ is then discretized by $p-1^{th}$ degree spline basis functions defined by the knot vector \eqref{eq:projected_knot_vector} and its variation $\delta\tau$ is discretized by the corresponding dual basis functions, as}
@@ -497,7 +500,10 @@ where
     \bar{\mathbf{K}}^s_{NS}=sGA\mathbf{P}^T\hat{\mathbf{P}}.
     \label{eq:nonsymmetric_timoshenko}
 \end{equation}
-\added{Compared to \eqref{eq:symmetric_timoshenko}, the formulation of stiffness matrix contributed by shear strain requires one less matrix operation in \eqref{eq:nonsymmetric_timoshenko}. One can note that, due to the different choices of function spaces of shear stress and its variation, the global stiffness matrix is no longer symmetric.}
+\added{Compared to \eqref{eq:symmetric_timoshenko}, the formulation of the shear strain contribution to the stiffness matrix shown in \eqref{eq:nonsymmetric_timoshenko} requires one less matrix operation. One can note that, due to the different choices of the function spaces for the shear stress and its variation, the global stiffness matrix is no longer symmetric.}
+
+\paragraph{Remark} 
+
 \subsection{Bandwidth of the stiffness matrix}
 A global $\bar{B}$ method that utilizes a global $L^2$ projection results in a dense stiffness matrix. The B\'ezier $\bar{B}$ \replaced{methods}{method}, on the other hand, \replaced{produce}{produces} sparse stiffness matrices. However, the coupling of the local dual basis functions does increase the bandwidth slightly. This is illustrated in Figure~\ref{fig:stiffness_matrix}, which shows the structure of the stiffness matrix for the Timoshenko beam problem using the second order basis functions of maximal smoothness for a displacement-based method (Figure~\ref{fig:stiffness_matrix}a), global $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}b), symmetric B\'ezier $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}c) and non-symmetric \Bezier $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}d). The blank cells indicate zero terms in the matrix while colored cells show the location of nonzero terms.
 \begin{figure}[!htb]
