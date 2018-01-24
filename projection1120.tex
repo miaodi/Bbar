@@ -448,7 +448,7 @@ Localizing to the B\'{e}zier element we define the strain-displacement arrays in
 \end{align}
 where $\mathbf{C}^e$ is the element extraction operator for the degree $p$ spline space, $\bar{\mathbf{C}}^e$ is the element extraction operator for the degree $p-1$ spline space, and $\hat{\bar{\mathbf{N}}}^e$ are the dual basis functions restricted to the element for the degree $p-1$ spline space. The global stiffness matrix can then be written as
 \begin{align}
-	\mathbf{K} = \mathbf{K}^b + \bar{\mathbf{K}}^s_S
+	\mathbf{K} = \mathbf{K}^b + \bar{\mathbf{K}}^s_S \label{eqn:symmetric_b_bar_timoshenko_stiffness}
 \end{align}
 where
 \begin{align}
@@ -502,7 +502,19 @@ where
 \end{equation}
 \added{Compared to \eqref{eq:symmetric_timoshenko}, the formulation of the shear strain contribution to the stiffness matrix shown in \eqref{eq:nonsymmetric_timoshenko} requires one less matrix operation. One can note that, due to the different choices of the function spaces for the shear stress and its variation, the global stiffness matrix is no longer symmetric.}
 
-\paragraph{Remark} 
+\paragraph{Remark} \added{From the stiffness matrix of the symmetric \Bezier $\bar{B}$ formulation \eqref{eqn:symmetric_b_bar_timoshenko_stiffness}, we can recover its mixed formulation as}
+
+\begin{equation}
+    \begin{bmatrix}
+        \mathbf{K}^b & \hat{\mathbf{P}}^T \\
+        sGA\hat{\mathbf{P}} & -\bar{\mathbf{M}}^{-1}
+    \end{bmatrix},
+\end{equation}
+\added{where both the shear stress and its variation are discretized by the dual basis functions. However, for the inner product of dual basis functions }
+\begin{equation}
+    \langle{\hat{\bar{N}}_i,\hat{\bar{N}}_j}\rangle\neq{\bar{\mathbf{M}}^{-1}_{ij}},
+\end{equation}
+\added{which shows the conflict between the symmetric \Bezier $\bar{B}$ formulation and the mixed formulation.}
 
 \subsection{Bandwidth of the stiffness matrix}
 A global $\bar{B}$ method that utilizes a global $L^2$ projection results in a dense stiffness matrix. The B\'ezier $\bar{B}$ \replaced{methods}{method}, on the other hand, \replaced{produce}{produces} sparse stiffness matrices. However, the coupling of the local dual basis functions does increase the bandwidth slightly. This is illustrated in Figure~\ref{fig:stiffness_matrix}, which shows the structure of the stiffness matrix for the Timoshenko beam problem using the second order basis functions of maximal smoothness for a displacement-based method (Figure~\ref{fig:stiffness_matrix}a), global $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}b), symmetric B\'ezier $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}c) and non-symmetric \Bezier $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}d). The blank cells indicate zero terms in the matrix while colored cells show the location of nonzero terms.
@@ -692,7 +704,7 @@ where
 \subsubsection{Discretization}
 Following the same approach as was described for Timoshenko beams in Section~\ref{sec:timoshenkobeam} we define element level strain-displacement matrices in terms of the Bernstein basis 
 \begin{align}
-\mathbf{B}^{dev}_e&=
+\added{\mathbf{B}^{dev}_e}&=
 \begin{bmatrix}
 \dfrac{2}{3}\dfrac{\partial{B}^e_{0,p}}{\partial{x}} & -\dfrac{1}{3}\dfrac{\partial{B}^e_{0,p}}{\partial{y}} & -\dfrac{1}{3}\dfrac{\partial{B}^e_{0,p}}{\partial{z}} & \cdots & \dfrac{2}{3}\dfrac{\partial{B}^e_{p,p}}{\partial{x}} & -\dfrac{1}{3}\dfrac{\partial{B}^e_{p,p}}{\partial{y}} & -\dfrac{1}{3}\dfrac{\partial{B}^e_{p,p}}{\partial{z}} \\
 -\dfrac{1}{3}\dfrac{\partial{B}^e_{0,p}}{\partial{x}}  & \dfrac{2}{3}\dfrac{\partial{B}^e_{0,p}}{\partial{y}} & -\dfrac{1}{3}\dfrac{\partial{B}^e_{0,p}}{\partial{z}} & \cdots & -\dfrac{1}{3}\dfrac{\partial{B}^e_{p,p}}{\partial{x}}  & \dfrac{2}{3}\dfrac{\partial{B}^e_{p,p}}{\partial{y}} & -\dfrac{1}{3}\dfrac{\partial{B}^e_{p,p}}{\partial{z}}\\
@@ -703,7 +715,7 @@ Following the same approach as was described for Timoshenko beams in Section~\re
 \end{bmatrix},
 \end{align}
 \begin{align}
-\mathbf{B}_e^{vol}&=
+\added{\mathbf{B}_e^{vol}}&=
 \begin{bmatrix}
 \dfrac{\partial{B}^e_{0,p}}{\partial{x}} & \dfrac{\partial{B}^e_{0,p}}{\partial{y}} & \dfrac{\partial{B}^e_{0,p}}{\partial{z}} & \cdots & \dfrac{\partial{B}^e_{p,p}}{\partial{x}} & \dfrac{\partial{B}^e_{p,p}}{\partial{y}} & \dfrac{\partial{B}^e_{p,p}}{\partial{z}}
 \end{bmatrix}
@@ -776,7 +788,7 @@ where
 \end{equation}
 
 \subsection{Numerical results}
-\added{We begin this section by numerically evaluating the inf€“-sup constant for the global $\bar{B}$ and non-symmetric \Bezier $\bar{B}$ methods.} 
+\added{We begin this section by numerically evaluating the infï¿½ï¿½-sup constant for the global $\bar{B}$ and non-symmetric \Bezier $\bar{B}$ methods.} 
 We then investigate the performance of the B\'{e}zier $\bar{B}$ method for two nearly incompressible linear elasticity problems under plane strain conditions. \added{For the numerical examples,} we first study the Cook's membrane problem, which is discretized with B-spline basis functions, and in the second problem we model the infinite plate with a circular hole problem using NURBS. Results computed using standard finite elements are labeled $Q_1$, $Q_2$, $Q_3$, and $Q_4$. Results computed using a global $\bar{B}$ method are labeled $\mathcal{T}^{L^2}$ and those computed with the \added{symmetric} B\'ezier $\bar{B}$ method and the \added{non-symmetric B\'ezier $\bar{B}$ method} are labeled $S-\mathcal{T}^{P}$ and $NS-\mathcal{T}^{P}$, respectively.
 
 \subsubsection{\added{Numerical evaluation of the inf-sup condition}}

@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex projection1120"] 1515534415 "projection1120.aux" "projection1120.bbl" "projection1120" 1515623793
+["bibtex projection1120"] 1516819414 "projection1120.aux" "projection1120.bbl" "projection1120" 1516819415
   "./elsarticle-num.bst" 1513027058 30001 6fb47de13cacd52e2c80466b180be262 ""
   "bibliography.bib" 1513884438 16425 27e96a4e7c37148e7fd83b8d85b3a012 ""
-  "projection1120.aux" 1515623793 23319 0cbbbb2a30b16cd5f6a1b84a5cf4c412 ""
+  "projection1120.aux" 1516819415 25503 65cf16a75912529504a4620b0beb33e2 ""
   (generated)
-  "projection1120.bbl"
   "projection1120.blg"
-["pdflatex"] 1515623791 "/Users/dimiao/Desktop/Bbar/projection1120.tex" "projection1120.pdf" "projection1120" 1515623793
-  "/Users/dimiao/Desktop/Bbar/projection1120.tex" 1515623791 72857 1371086cfe20a57f7da9581a80c00f68 ""
+  "projection1120.bbl"
+["pdflatex"] 1516819414 "/Users/dimiao/Desktop/Bbar/projection1120.tex" "projection1120.pdf" "projection1120" 1516819415
+  "/Users/dimiao/Desktop/Bbar/projection1120.tex" 1516819412 74660 ccb76fde9690fddebc31a994c4ecf8b2 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1480098696 1536 12e8c510d3e158fdd0e9a42e75118bd9 ""
@@ -328,9 +328,9 @@
   "no.pdf" 1515526857 94218 ec2b38c9d3c5f3cf8fe4364bdd888c20 ""
   "ns.pdf" 1514002328 282809 cc5688fe495f7f8c294047a55a022475 ""
   "phi-sin.pdf" 1513632014 59266 89a619205fd1e08a3d959ab39f81a4d0 ""
-  "projection1120.aux" 1515623793 23319 0cbbbb2a30b16cd5f6a1b84a5cf4c412 ""
-  "projection1120.bbl" 1515534415 10889 be059b38d9ecf4c00357cdbeff455ca4 "bibtex projection1120"
-  "projection1120.tex" 1515623791 72857 1371086cfe20a57f7da9581a80c00f68 ""
+  "projection1120.aux" 1516819415 25503 65cf16a75912529504a4620b0beb33e2 ""
+  "projection1120.bbl" 1516819414 10889 be059b38d9ecf4c00357cdbeff455ca4 "bibtex projection1120"
+  "projection1120.tex" 1516819412 74660 ccb76fde9690fddebc31a994c4ecf8b2 ""
   "s.pdf" 1514002213 290217 9b831397fce30c3151e1565c0f52cc45 ""
   "slenderness_M.pdf" 1513632130 60473 29999c55369959c5ba0aeb9ca7f97f61 ""
   "slenderness_Q.pdf" 1513632149 59820 b6c643da847996a1beb3e2fdb4441c55 ""
@@ -344,7 +344,7 @@
   "w-sin.pdf" 1513631983 59411 fb4816be998ad9c6a80353c4ddae6684 ""
   "weights.pdf" 1513027058 16911 9fa771276a111a3f749278cc96bd6cd4 ""
   (generated)
-  "projection1120.pdf"
+  "projection1120.aux"
   "projection1120.log"
   "projection1120.soc"
-  "projection1120.aux"
+  "projection1120.pdf"
