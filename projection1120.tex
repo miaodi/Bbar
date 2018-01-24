@@ -504,8 +504,7 @@ where
 \end{equation}
 \added{Compared to \eqref{eq:symmetric_timoshenko}, the formulation of the shear strain contribution to the stiffness matrix shown in \eqref{eq:nonsymmetric_timoshenko} requires one less matrix operation. One can note that, due to the different choices of the function spaces for the shear stress and its variation, the global stiffness matrix is no longer symmetric.}
 
-\paragraph{Remark} \added{From the stiffness matrix of the symmetric \Bezier $\bar{B}$ formulation \eqref{eqn:symmetric_b_bar_timoshenko_stiffness}, we can recover its mixed formulation as}
-
+\paragraph{Remark} \added{ The symmetric \Bezier $\bar{B}$ formulation is not consistent with a mixed formulation. To see this we can recover the mixed formulation of \eqref{eqn:symmetric_b_bar_timoshenko_stiffness}, which is}
 \begin{equation}
     \begin{bmatrix}
         \mathbf{K}^b & \hat{\mathbf{P}}^T \\
@@ -516,7 +515,7 @@ where
 \begin{equation}
     \langle{\hat{\bar{N}}_i,\hat{\bar{N}}_j}\rangle\neq{\bar{\mathbf{M}}^{-1}_{ij}},
 \end{equation}
-\added{which shows the conflict between the symmetric \Bezier $\bar{B}$ formulation and the mixed formulation.}
+\added{which shows the inconsistency between the symmetric \Bezier $\bar{B}$ formulation and the mixed formulation.}
 
 \subsection{Bandwidth of the stiffness matrix}
 A global $\bar{B}$ method that utilizes a global $L^2$ projection results in a dense stiffness matrix. The B\'ezier $\bar{B}$ \replaced{methods}{method}, on the other hand, \replaced{produce}{produces} sparse stiffness matrices. However, the coupling of the local dual basis functions does increase the bandwidth slightly. This is illustrated in Figure~\ref{fig:stiffness_matrix}, which shows the structure of the stiffness matrix for the Timoshenko beam problem using the second order basis functions of maximal smoothness for a displacement-based method (Figure~\ref{fig:stiffness_matrix}a), global $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}b), symmetric B\'ezier $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}c) and non-symmetric \Bezier $\bar{B}$ method (Figure~\ref{fig:stiffness_matrix}d). The blank cells indicate zero terms in the matrix while colored cells show the location of nonzero terms.
