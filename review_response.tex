@@ -1,0 +1,111 @@
+\documentclass[10pt]{letter}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+\usepackage{amscd}
+\usepackage{times}
+\usepackage{color}
+\usepackage{ gensymb }
+
+\newcommand{\qed}{\hfill \mbox{\raggedright \rule{.07in}{.1in}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BEGIN: setup formating for works in progress.  Sets margins wider than normal,
+% increases line spacing, and prints date of build on the title page and in the 
+% footer of all other pages.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\oddsidemargin{0.25in}
+\setlength\evensidemargin{0.25in}
+\setlength{\textwidth}{6.0in}
+\setlength{\textheight}{8.0in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% End formatting. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\signature{Michael J. Borden}
+\begin{document}
+
+\begin{letter}{Prof. T. J. R. Hughes, Editor \\ Computer Methods in Applied Mechanics and Engineering}
+
+\opening{Dear Prof. Hughes,}
+
+First of all, thank you for the editorial handling of our manuscript ``B\'{e}zier $\bar{B}$ Projection.''  We thank the reviewers for their thorough and detailed reviews of this manuscript.  We found the comments to be instructive and we have addressed them in the revised draft.  Our response to the comments from the reviewers are included below.  Based on the reviewers questions about convergence rates and the relationship between our formulation and mixed formulations we have added a number of sections that introduce a new formulation based on a mixed approach and investigate the convergence issues.  These section include: 5.2, 6.2, and 6.3.1 with additional discussion of the numerical results.  For clarity, we have included the reviewers comments, followed by our response, which we have highlighted in blue. Major changes in the submitted revised manuscript have been highlighted in blue.
+
+\vspace{0.2in}
+Best Regards,
+
+Di Miao
+
+\vspace{0.2in}
+{\bf Reviewer \#1}: This manuscript extends the concept of B\'Åezier projection introduced in the paper CMAME 284:55-105, 2015 (cited reference [18]) to consider problems which exhibit internal constraints. The examples considered are the Timoshenko beam with increasing slenderness (L/t) and nearly incompressible linear elasticity. The manuscript is well written and subject to some minor changes should be accepted for publication in the Journal.
+
+1) There are alternatives to the global L2 projection used for comparison in the paper. For example, see the papers: (a) The enhanced assumed strain method for the isogeometric analysis of nearly incompressible deformation of solids, by Cardoso and de Sa (JNME, 92:56-78, 2012) and (b) Isogeometric analysis of nearly incompressible solids, by Taylor (JNME, 87:273-288, 2011).
+
+\begin{quote}
+{\color{blue}
+We thank the review for bringing these methods to our attention. We have made reference to them in the introduction of our paper, but do not include further comparisons because our methods are based on the L2 projection method.
+}
+\end{quote}
+
+2) The example problems could include a more challenging test on performance for a near incompressible problem. A good example is the problem described in Sect 5.1 of A stabilized mixed finite element method for finite elasticity. Formulation for linear displacement and pressure interpolation, by O. Klaas et al. (CMAME, 180:65-79, 1999). The high confinement and strong stress gradients in this example provide for a much better test problem ‚Äì one which also does not have a singular point as exhibited in the Cook problem which probably has an effect in no unique asymptote in bottom of Figure 13.
+
+\begin{quote}
+{\color{blue}
+We agree that this would be a good example for further study of the proposed method. However, the suggested example problem uses a Neo-Hookean model in a large deformation context, which would entail the extension of the proposed methods to the $\bar{F}$ formulation. In the authors opinion this requires a careful and comprehensive study and is left as the subject of a future work.
+}
+\end{quote}
+
+3) The main difficulty with the proposed methodology is implementing in any existing finite element system based to element assembly as, for example, results for Kb in equation (49). Can this be overcome by using a mixed method, possibly with nodal parameters? This will certainly limit adoption of the proposed method in my view.
+
+\begin{quote}
+{\color{blue}
+This is a very good question and has led to the addition of a non-symmetric formulation with a direct link to mixed formulations. In this additional formulation all matrices are formulated at the element level. We have kept the original symmetric formulation and believe it is still a useful approach. In the authors experience there are now many isogeometric codes that have moved beyond the need to strictly follow existing FEA element assembly routines so that adoption argument is not as strong as it once was.
+}
+\end{quote}
+
+{\bf Reviewer \#2}: The paper presents a B-≠bar method based on BeÃÅzier projection coupled with IGA. IT presents some interesting new results that seem promising. I would like the authors to address the following comments.
+
+In paragraphs 5.2 and 6.2, some of the notation used to define strain displacement matrices are not introduced. In addition, the structure of the dof storage is not presented, which would help understand the structure of the strain displacement arrays. I would recommend that some definition and a bit more details are given. This seems particularly important as the the first IGA B-≠bar paper (ref 38) does not present the method using strain displacement matrices.
+
+
+
+\begin{quote}
+{\color{blue}
+We address this issue by adding the strain displacement matrices in equation (36), equation (37), equation (82) and equation (83).
+}
+\end{quote}
+
+Plate with a hole example. As pointed out for p=3 and p=4 convergence rates are not optimal and for p=4, there is an increase in the error with the BeÃÅzier projection between the 2nd and 3rd meshes. The explanation regarding the conditioning of the stiffness matrix is very short. If this is indeed the case, i would expect to see table of conditioning number obtained with all cases to see the supposed degradation. Moreover the authors have not given any information regarding the linear algebra solver they are using. A more detailed study if this behaviour and its cause seems quite important.
+
+\begin{quote}
+    {\color{blue}
+    We found the lose of rates is due to the inconsistency with the mixed formulation, we proposed a new non-symmetric formulation based on the mixed formulation which recovers the rates. 
+    }
+\end{quote}
+
+In the examples for the linear incompressible elastic case, it would be interesting to show some plots for the stresses obtained with the method. As observed in the literature, for higher order functions, locking is sometimes not seen on displacement convergence plots. See for example the following reference : Isogeometric analysis of nearly incompressible large strain plasticity , T. Elguedj and T.J.R. Hughes, cmame 268, pp 388-416, 2014. Comparing stress contours for the standard, full B-bar and B\'ezier B-bar methods would be a plus to convince the reader of the efficiency and performance of the proposed method.
+
+\begin{quote}
+    {\color{blue}
+    The stress convergence plots and stress error contour plots are added in figure 18 and figure 19.
+    }
+\end{quote}
+
+The computational cost of the B\'ezier B-≠bar method is not discussed at all in the paper. I agree that obtaining a sparse matrix is an advantage over the classical B-bar method, but giving some information regarding the relative cost of forming the local stiffness matrices and assembly process would be interesting. Looking at paragraph 4.2, it seems that there are quite some operations to perform. Please give some comments and detailed information regarding the cost fo all 3 methods.
+
+\begin{quote}
+    {\color{blue}
+    In the authors opinion comparing the cost of the methods is highly dependent on the implementation and has limited value. From a basic linear algebra accounting we know that the cost of solving dense systems is prohibitive for large problems. Perhaps this study could be the subject of a future work.
+    }
+\end{quote}
+
+\end{letter}
+\end{document}
+
