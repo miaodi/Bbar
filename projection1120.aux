@@ -8,15 +8,14 @@
 \citation{thomas_bezier_2015}
 \citation{borden_isogeometric_2011,scott_isogeometric_2011}
 \citation{malkus_mixed_1978,zienkiewicz_reduced_1971}
-\citation{nagtegaal_numerically_1974,hughes_generalization_1980}
-\citation{dolbow_volumetric_1999,kasper_mixed-enhanced_2000,hughes_variational_1986}
+\citation{nagtegaal_numerically_1974,hughes_generalization_1980,NME:NME4328}
+\citation{dolbow_volumetric_1999,kasper_mixed-enhanced_2000,hughes_variational_1986,NME:NME3048}
 \citation{echter_numerical_2010,bouclier_locking_2012}
 \providecommand \oddpage@label [2]{}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{Based on two different interpretations of the well-known $\mathaccentV {bar}016{B}$ projection, we propose two formulations and name them symmetric and non-symmetric B\'{e}zier $\mathaccentV {bar}016{B}$ projection.}}{1}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{{B\'{e}zier} projection}}{1}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{{B\'{e}zier} projection}}{1}}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{basis for}}{1}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{projection}}{1}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{two proposed formulations}}{1}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{projection}}{1}}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{{B\'{e}zier} dual basis}}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \citation{kiendl_isogeometric_2009,kiendl_isogeometric_2015}
@@ -25,6 +24,7 @@
 \citation{elguedj:hal-00457010}
 \citation{bouclier_efficient_2013}
 \citation{mitchell_method_2011,govindjee_convergence_2012}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{In this paper we introduce two methods that employ {B\'{e}zier} projection to increase the sparsity of the stiffness matrix that results form $\mathaccentV {bar}016{B}$ methods, which typically lead to a dense system. We call these methods the symmetric and non-symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ projection methods based on the resulting symmetry of the stiffness method. We show that both methods result in a sparse stiffness matrix, reduce locking, and result in optimal (non-symmetric method) or near optimal (symmetric method) convergence rates. We also perform an inf-sup analysis to help provide further insight into the behavior and quality of these methods.}}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Preliminaries and notation}{2}}
 \newlabel{sec:preliminaries}{{2}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Univariate Bernstein basis functions}{2}}
@@ -32,19 +32,19 @@
 \newlabel{eq:weight}{{5}{2}}
 \citation{borden_isogeometric_2011}
 \citation{thomas_bezier_2015}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of B\'ezier extraction and projection in one dimension for a B-spline of degree 2 and knot vector $[0,0,0,1/3/2/3,1,1,1]$ (restricted to the second element for illustrative purposes).\relax }}{3}}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:extraction_and_projection}{{1}{3}}
+\citation{thomas_bezier_2015}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Multivariate spline basis functions}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}B\'{e}zier extraction}{3}}
 \newlabel{sec:extraction}{{3}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}B\'ezier projection}{3}}
+\newlabel{sec:bproject}{{4}{3}}
+\newlabel{eq:element-Qi}{{15}{3}}
 \citation{thomas_bezier_2015}
-\citation{thomas_bezier_2015}
-\citation{thomas_bezier_2015}
-\@writefile{toc}{\contentsline {section}{\numberline {4}B\'ezier projection}{4}}
-\newlabel{sec:bproject}{{4}{4}}
-\newlabel{eq:element-Qi}{{15}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Illustration of B\'ezier extraction and projection in one dimension for a B-spline of degree 2 and knot vector $[0,0,0,1/3/2/3,1,1,1]$ (restricted to the second element for illustrative purposes).\relax }}{4}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:extraction_and_projection}{{1}{4}}
 \newlabel{eqn:Bezier_weight}{{18}{4}}
+\citation{thomas_bezier_2015}
 \citation{hughes_finite_2012}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Weights over each knot span associated with the basis function defined by the knot vector $[0,0,0,\sfrac {1}{3},\sfrac {2}{3},1,1,1]$.\relax }}{5}}
 \newlabel{fig:weights}{{2}{5}}
@@ -64,12 +64,11 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Deformation of a Timoshenko beam. The normal rotates by the angle $\phi $, which is not equal to $w'$, due to shear deformation.\relax }}{8}}
 \newlabel{fig:Timoshenko_beam_cross}{{5}{8}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}The weak form}{8}}
-\@writefile{loc}{\contentsline {subsection}{Deleted: \truncate {.3\textwidth }{and $\mathaccentV {bar}016{\gamma }$ is the projected shear strain.}}{8}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Discretization}{8}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{We discretize $\omega $ and $\phi $ as}}{8}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{\omega = \DOTSB \sum@ \slimits@ _A \omega _A N_A}}{8}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{\phi = \DOTSB \sum@ \slimits@ _A \phi N_A}}{8}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{$N_A$ is a degree $p$ spline basis function, $\omega _A$ and $\phi _A$ are the corresponding control point values.}}{8}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{We discretize $\omega $ and $\phi $ as}}{8}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{\omega = \DOTSB \sum@ \slimits@ _A \omega _A N_A}}{8}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{\phi = \DOTSB \sum@ \slimits@ _A \phi N_A}}{8}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{$N_A$ is a degree $p$ spline basis function, $\omega _A$ and $\phi _A$ are the corresponding control point values.}}{8}}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{The shear strain and bending strain can then be expressed as}}{8}}
 \newlabel{eq:origin_knot_vector}{{38}{8}}
 \newlabel{eq:projected_knot_vector}{{39}{8}}
@@ -77,15 +76,9 @@
 \citation{hughes_variational_1986}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{where $B^e_{i,p}$ is the $i^{th}$ Bernstein basis function of order $p$}}{9}}
 \newlabel{eq:symmetric_timoshenko}{{45}{9}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{\mathaccentV {hat}05E{\mathbf  {P}}_e}}{9}}
 \newlabel{eqn:symmetric_b_bar_timoshenko_stiffness}{{48}{9}}
 \newlabel{eqn:bending_stiffness}{{49}{9}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{\mathaccentV {hat}05E{\mathbf  {P}}}}{9}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{\mathaccentV {hat}05E{\mathbf  {P}}}}{9}}
 \newlabel{eqn:shear_stiffness}{{50}{9}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{\mathaccentV {hat}05E{\mathbf  {P}}}}{9}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{\mathaccentV {hat}05E{\mathbf  {P}}_e}}{9}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{\mathaccentV {hat}05E{\mathbf  {P}}}}{9}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Non-symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ projection}{9}}
 \newlabel{sec:non-symmetric}{{5.2}{9}}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{The relationship between $\mathaccentV {bar}016{B}$-formulations and mixed formulations has been studied and it has been shown by Simo and Hughes \cite  {hughes_variational_1986} that they are equivalent. However, the symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ projection method presented in Section\nobreakspace  {}5.1\hbox {}, where we started by considered the $\mathaccentV {bar}016{B}$ formulation as a strain projection method, lacks this connection to mixed formulations (we will show this in the following section). In this section we present a second method based on {B\'{e}zier} projection in which we view the $\mathaccentV {bar}016{B}$ formulation as a mixed formulation with the auxiliary variable (the shear stress for the case of Timoshenko beam) being eliminated. Taking advantage of the dual basis formulation of the {B\'{e}zier} projection operator we can incorporate {B\'{e}zier} projection into the mixed formulation by using the {B\'{e}zier} dual basis functions as the test functions of the auxiliary variable. Since the resulting stiffness matrix is not symmetric, this formulation is referred to as the non-symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ projection method. Although this method does not preserve symmetry we will show that it does preserve convergence rates.}}{9}}
@@ -100,9 +93,9 @@
 \newlabel{eq:nonsymmetric_timoshenko}{{61}{10}}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{Compared to \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 45\hbox {}\unskip \@@italiccorr )}}, the formulation of the shear strain contribution to the stiffness matrix shown in \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 61\hbox {}\unskip \@@italiccorr )}} requires one less matrix operation. One can note that, due to the different choices of the function spaces for the shear stress and its variation, the global stiffness matrix is no longer symmetric.}}{10}}
 \@writefile{toc}{\contentsline {paragraph}{Remark}{10}}
-\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{From the stiffness matrix of the symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ formulation \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 48\hbox {}\unskip \@@italiccorr )}}, we can recover its mixed formulation as}}{10}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{ The symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ formulation is not consistent with a mixed formulation. To see this we can recover the mixed formulation of \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces 48\hbox {}\unskip \@@italiccorr )}}, which is}}{10}}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{where both the shear stress and its variation are discretized by the dual basis functions. However, for the inner product of dual basis functions }}{10}}
-\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{which shows the conflict between the symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ formulation and the mixed formulation.}}{10}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{which shows the inconsistency between the symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ formulation and the mixed formulation.}}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Bandwidth of the stiffness matrix}{10}}
 \@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{methods}}{10}}
 \@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{produce}}{10}}
@@ -133,7 +126,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Convergence study for increasing slenderness, $p=2$, and $\#{dof}=32$. Error in the $L^2$-norm for (a) displacement $w$, (b) rotation $\phi $, (c) bending moment $M$, and (d) shear force $Q$.\relax }}{13}}
 \newlabel{fig:slenderness}{{10}{13}}
 \@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{To desmonstrate the source of volumetric locking, we introduce the pressure term}}{14}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{an additional constraint is applied to the volumetric strain as}}{14}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{an additional constraint is applied to the volumetric strain as}}{14}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ projection}{14}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}The weak form}{14}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Discretization}{14}}
@@ -178,29 +171,35 @@
 \newlabel{sub@fig:platewithhole_geometry_b}{{b}{21}}
 \@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Geometry, boundary conditions, and material properties for the infinite plate with a hole.\relax }}{21}}
 \newlabel{fig:platewithhole_geometry}{{17}{21}}
-\@writefile{loc}{\contentsline {subsection}{Replaced: \truncate {.3\textwidth }{For the symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ method, the optimality in all three measures has been obtained for biquadratic elements; the optimal energy convergence rate has been achieved for bicubic elements; however, the degradation of convergence rates in all three measures has been observed for biquartic elements. The can be attributed to the fact that the derivation of the symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ method is purely based on the engineering analogy between the $L^2$ projection and {B\'{e}zier} projection. On the other hand, the non-symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ method, derived from the mixed formulation, is optimal for displacement, stress and energy for all elements with slightly higher errors than that of global $\mathaccentV {bar}016{B}$ method, which agrees with the inf-sup test.}}{21}}
-\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{Contour plots of the error in $\sigma _{xx}$ for biquartic elements of the most refined mesh are shown in Figure 19\hbox {}, We can see from these plots that $Q_4$ elements have severe error while the projection methods all reduce error to a more acceptable level. Here we can also see that the non-symmetric method has a slight improvement compared to the symmetric method.}}{21}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{For the symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ method, the optimality in all three measures has been obtained for biquadratic elements; the optimal energy convergence rate has been achieved for bicubic elements; however, the degradation of convergence rates in all three measures has been observed for biquartic elements. The can be attributed to the fact that the derivation of the symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ method is purely based on the engineering analogy between the $L^2$ projection and {B\'{e}zier} projection. On the other hand, the non-symmetric {B\'{e}zier} $\mathaccentV {bar}016{B}$ method, derived from the mixed formulation, is optimal for displacement, stress and energy for all elements with slightly higher errors than that of global $\mathaccentV {bar}016{B}$ method, which agrees with the inf-sup test.}}{21}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{Contour plots of $\sigma _{xx}$ for biquartic elements of the finest mesh are shown in Figure 19\hbox {}. We denote that, for the finest mesh, results from all $\mathaccentV {bar}016{B}$ methods are consistent with the refernce solution, while using standard finite element still leads to a huge error. Figure 20\hbox {} shows the absolute error of $\sigma _{xx}$ with the same mesh. As can be seen, the projection methods reduce error to an acceptable level (less than $.1\%$ of the maximal $\sigma _{xx}$) while the error the $Q_4$ element is at the same level of the maximal $\sigma _{xx}$. Here we can also see that the non-symmetric method has a slight improvement compared to the symmetric method.}}{21}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{21}}
+\newlabel{sec:conclusion}{{7}{21}}
 \bibstyle{elsarticle-num}
 \bibdata{bibliography}
 \bibcite{hughes_isogeometric_2005}{1}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Convergence study of the plate with a circular hole. The relative $L^2$ error of displacement, stress and the relative error in energy norm with respect to mesh refinement.\relax }}{22}}
+\newlabel{fig:platewithhole_convergence}{{18}{22}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{We have made the connection between the non-symmetric method and mixed formulations and shown that although this method does not strictly satisfy the inf-sup condition it reduces constraints sufficiently to provide optimal convergence rates for the problems studied here.}}{22}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{ for the symmetric method and optimal rates for the non-symmetric method}}{22}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{when using the the symmetric formulation are a symptom of the fact that the symmetric formulation (is not consistent with the mixed formulation) has may not satisfy the inf-sup condition}}{22}}
+\@writefile{loc}{\contentsline {subsection}{Added: \truncate {.3\textwidth }{These two methods provide a choice between a formulation that results in a symmetric stiffness matrix but requires matrix operations at the global level and potentially less accuracy and a formulation that results in a non-symmetric stiffness matrix that can be assembled in the standard element routine approach and achieves optimal convergence rates. The trade offs are between higher costs in assembly for the symmetric formulation versus potentially higher costs in solving a non-symmetric system for the non-symmetric formulation. In either case, however, the cost is less than using the standard $\mathaccentV {bar}016{B}$ formulation.}}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces  Contour plots of $\sigma _{xx}^h$ for the plate with a circular hole ($p=4$, and the finest mesh is used).\relax }}{23}}
+\newlabel{fig:platewithhole_contour}{{19}{23}}
 \bibcite{cottrell_isogeometric_2009}{2}
 \bibcite{cottrell_studies_2007}{3}
 \bibcite{cottrell2006isogeometric}{4}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Convergence study of the plate with a circular hole. The relative $L^2$ error of displacement, stress and the relative error in energy norm with respect to mesh refinement.\relax }}{22}}
-\newlabel{fig:platewithhole_convergence}{{18}{22}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{22}}
-\newlabel{sec:conclusion}{{7}{22}}
 \bibcite{hughes_duality_2008}{5}
 \bibcite{bazilevs_isogeometric_2010}{6}
 \bibcite{evans_n-widths_2009}{7}
 \bibcite{sederberg_t-splines_2003}{8}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces {\color  {red} Can we change this to relative error?} Contour plots of $\delimiter "026A30C {\sigma _{xx}-\sigma _{xx}^h}\delimiter "026A30C $ for the plate with a circular hole ($p=4$, and the finest mesh is used).\relax }}{24}}
+\newlabel{fig:platewithhole_error_contour}{{20}{24}}
 \bibcite{scott_local_2012}{9}
 \bibcite{li_analysis-suitable_2013}{10}
 \bibcite{bornemann_subdivision-based_2013}{11}
 \bibcite{scott_isogeometric_2014}{12}
 \bibcite{schillinger_isogeometric_2012}{13}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces {\color  {red} Can we change this to relative error?} Contour plots of $\delimiter "026A30C {\sigma _{xx}-\sigma _{xx}^h}\delimiter "026A30C $ for the plate with a circular hole ($p=4$, and the finest mesh is used).\relax }}{23}}
-\newlabel{fig:platewithhole_contour}{{19}{23}}
 \bibcite{evans_hierarchical_2015}{14}
 \bibcite{forsey_hierarchical_1988}{15}
 \bibcite{dokken_polynomial_2013}{16}
@@ -212,23 +211,25 @@
 \bibcite{zienkiewicz_reduced_1971}{22}
 \bibcite{nagtegaal_numerically_1974}{23}
 \bibcite{hughes_generalization_1980}{24}
-\bibcite{dolbow_volumetric_1999}{25}
-\bibcite{kasper_mixed-enhanced_2000}{26}
-\bibcite{hughes_variational_1986}{27}
-\bibcite{echter_numerical_2010}{28}
-\bibcite{bouclier_locking_2012}{29}
-\bibcite{kiendl_isogeometric_2009}{30}
-\bibcite{kiendl_isogeometric_2015}{31}
-\bibcite{oesterle_hierarchic_2017}{32}
-\bibcite{oesterle_shear_2016}{33}
-\bibcite{echter_hierarchic_2013}{34}
-\bibcite{adam_improved_2014}{35}
-\bibcite{adam_improved_2015}{36}
-\bibcite{adam_selective_2015}{37}
-\bibcite{elguedj:hal-00457010}{38}
-\bibcite{bouclier_efficient_2013}{39}
-\bibcite{mitchell_method_2011}{40}
-\bibcite{govindjee_convergence_2012}{41}
-\bibcite{hughes_finite_2012}{42}
-\bibcite{kiendl_single-variable_2015}{43}
-\bibcite{chapelle_inf-sup_1993}{44}
+\bibcite{NME:NME4328}{25}
+\bibcite{dolbow_volumetric_1999}{26}
+\bibcite{kasper_mixed-enhanced_2000}{27}
+\bibcite{hughes_variational_1986}{28}
+\bibcite{NME:NME3048}{29}
+\bibcite{echter_numerical_2010}{30}
+\bibcite{bouclier_locking_2012}{31}
+\bibcite{kiendl_isogeometric_2009}{32}
+\bibcite{kiendl_isogeometric_2015}{33}
+\bibcite{oesterle_hierarchic_2017}{34}
+\bibcite{oesterle_shear_2016}{35}
+\bibcite{echter_hierarchic_2013}{36}
+\bibcite{adam_improved_2014}{37}
+\bibcite{adam_improved_2015}{38}
+\bibcite{adam_selective_2015}{39}
+\bibcite{elguedj:hal-00457010}{40}
+\bibcite{bouclier_efficient_2013}{41}
+\bibcite{mitchell_method_2011}{42}
+\bibcite{govindjee_convergence_2012}{43}
+\bibcite{hughes_finite_2012}{44}
+\bibcite{kiendl_single-variable_2015}{45}
+\bibcite{chapelle_inf-sup_1993}{46}
