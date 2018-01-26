@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 JAN 2018 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  26 JAN 2018 10:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1752,11 +1752,11 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 28893 strings out of 492995
- 593833 string characters out of 6132704
+ 28891 strings out of 492995
+ 593812 string characters out of 6132704
  671987 words of memory out of 5000000
- 31794 multiletter control sequences out of 15000+600000
- 32947 words of font info for 130 fonts, out of 8000000 for 9000
+ 31793 multiletter control sequences out of 15000+600000
+ 32779 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,25n,77p,10392b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
@@ -1784,14 +1784,13 @@ dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2017/texmf
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on projection1120.pdf (26 pages, 2419119 bytes).
+fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on projection1120.pdf (26 pages, 2406977 bytes).
 PDF statistics:
- 1014 PDF objects out of 1200 (max. 8388607)
- 841 compressed objects within 9 object streams
+ 1010 PDF objects out of 1200 (max. 8388607)
+ 838 compressed objects within 9 object streams
  0 named destinations out of 1000 (max. 500000)
  338 words of extra memory for PDF output out of 10000 (max. 10000000)
 

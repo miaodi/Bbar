@@ -132,14 +132,10 @@ T.~J.~R. Hughes, Generalization of selective integration procedures to
   in Engineering 15~(9) (1980) 1413--1418.
 
 \bibitem{NME:NME4328}
-R.~P.~R. Cardoso, J.~M.~A. Cesar~de Sa,
-  \href{http://dx.doi.org/10.1002/nme.4328}{The enhanced assumed strain method
-  for the isogeometric analysis of nearly incompressible deformation of
-  solids}, International Journal for Numerical Methods in Engineering 92~(1)
-  (2012) 56--78.
-\newblock \href {http://dx.doi.org/10.1002/nme.4328}
-  {\path{doi:10.1002/nme.4328}}.
-\newline\urlprefix\url{http://dx.doi.org/10.1002/nme.4328}
+R.~P.~R. Cardoso, J.~M.~A. Cesar~de Sa, The enhanced assumed strain method for
+  the isogeometric analysis of nearly incompressible deformation of solids,
+  International Journal for Numerical Methods in Engineering 92~(1) (2012)
+  56--78.
 
 \bibitem{dolbow_volumetric_1999}
 J.~Dolbow, T.~Belytschko, Volumetric locking in the element free {G}alerkin
@@ -159,8 +155,6 @@ T.~Hughes, On the variational foundations of assumed strain methods, Journal of
 R.~L. Taylor, Isogeometric analysis of nearly incompressible solids,
   International Journal for Numerical Methods in Engineering 87~(1-5) (2011)
   273--288.
-\newblock \href {http://dx.doi.org/10.1002/nme.3048}
-  {\path{doi:10.1002/nme.3048}}.
 
 \bibitem{echter_numerical_2010}
 R.~Echter, M.~Bischoff, Numerical efficiency, locking and unlocking of {NURBS}
@@ -178,9 +172,9 @@ J.~Kiendl, K.~U. Bletzinger, J.~Linhard, R.~W\"{u}chner, Isogeometric shell
   Mechanics and Engineering 198~(49) (2009) 3902--3914.
 
 \bibitem{kiendl_isogeometric_2015}
-M.~C. Kiendl, J.and~Hsu, M.~Wu, A.~Reali, Isogeometric {K}irchhoff--{L}ove
-  shell formulations for general hyperelastic materials, Computer Methods in
-  Applied Mechanics and Engineering 291 (2015) 280--303.
+J.~Kiendl, M.~C. Hsu, M.~Wu, A.~Reali, Isogeometric {K}irchhoff--{L}ove shell
+  formulations for general hyperelastic materials, Computer Methods in Applied
+  Mechanics and Engineering 291 (2015) 280--303.
 
 \bibitem{oesterle_hierarchic_2017}
 B.~Oesterle, R.~Sachse, E.~Ramm, M.~Bischoff, Hierarchic isogeometric large
@@ -222,9 +216,9 @@ T.~Elguedj, Y.~Bazilevs, V.~M. Calo, T.~J. Hughes, {B-bar and F-bar projection
   Mechanics and Engineering} 197~(33-40) (2008) 2732--2762.
 
 \bibitem{bouclier_efficient_2013}
-R.~Bouclier, T.~Elguedj, A.~Combescure, Efficient isogeometric {NURBS}-based
-  solid-shell elements: {M}ixed formulation and-method, Computer Methods in
-  Applied Mechanics and Engineering 267 (2013) 86--110.
+R.~Bouclier, T.~Elguedj, A.~Combescure, Efficient isogeometric nurbs-based
+  solid-shell elements: Mixed formulation and $\bar{B}$-method, Computer
+  Methods in Applied Mechanics and Engineering 267 (2013) 86--110.
 
 \bibitem{mitchell_method_2011}
 T.~J. Mitchell, S.~Govindjee, R.~L. Taylor, A method for enforcement of
