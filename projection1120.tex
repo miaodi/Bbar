@@ -992,7 +992,7 @@ The setup for the infinite plate with a circular hole problem is shown in Figure
 
 Convergence plots for the relative error of the displacement and energy in the $L^2$ norm are shown in Figure \ref{fig:platewithhole_convergence}. As can be seen, the standard $Q_p$ approximations suffer from severe volumetric locking for all orders while, on the other hand, the $\bar{B}$ methods remedy locking for all cases. \added{For the symmetric \Bezier $\bar{B}$ method, the optimality in all three measures has been obtained for biquadratic elements; the optimal energy convergence rate has been achieved for bicubic elements; however, the degradation of convergence rates in all three measures has been observed for biquartic elements. The can be attributed to the fact that the derivation of the symmetric \Bezier $\bar{B}$ method is purely based on the engineering analogy between the $L^2$ projection and \Bezier projection. On the other hand, the non-symmetric \Bezier $\bar{B}$ method, derived from the mixed formulation, is optimal for displacement, stress and energy for all elements with slightly higher errors than that of global $\bar{B}$ method, which agrees with the inf-sup test.}\par
 
-\added{Contour plots of  $\sigma_{xx}$ for biquartic elements of the finest mesh are shown in Figure \ref{fig:platewithhole_contour}. We denote that, for the finest mesh, results from all $\bar{B}$ methods are consistent with the refernce solution, while using standard finite element still leads to a huge error. Figure \ref{fig:platewithhole_error_contour} shows the absolute error of $\sigma_{xx}$ with the same mesh. As can be seen, the projection methods reduce error to an acceptable level (less than $.1\%$ of the maximal $\sigma_{xx}$) while the error the $Q_4$ element is at the same level of the maximal $\sigma_{xx}$. Here we can also see that the non-symmetric method has a slight improvement compared to the symmetric method.}
+\added{Contour plots of  $\sigma_{xx}$ for biquartic elements of the finest mesh are shown in Figure \ref{fig:platewithhole_contour}. We note that, for the finest mesh, results from all $\bar{B}$ methods are consistent with the reference solution, while using standard finite element results in large errors in the stress. Figure \ref{fig:platewithhole_error_contour} shows the absolute error of $\sigma_{xx}$ with the same mesh. As can be seen, the projection methods reduce error to an acceptable level (less than $.1\%$ of the maximal $\sigma_{xx}$) while the error the $Q_4$ element is at the same level of the maximal $\sigma_{xx}$. Here we can also see that the non-symmetric method has a slight improvement compared to the symmetric method.}
 \begin{figure}[h]
     \center
 \begin{tabular}{ccc}
@@ -1015,7 +1015,7 @@ Convergence plots for the relative error of the displacement and energy in the $
     \includegraphics[width=.4\linewidth]{reference_stress_contour} & \includegraphics[width=.14\linewidth]{legend}\\
     Reference & Legend
     \end{tabular}
-        \caption{ Contour plots of $\sigma_{xx}^h$ for the plate with a circular hole ($p=4$, and the finest mesh is used).}
+        \caption{ Contour plots of $\sigma_{xx}^h$ for the plate with a circular hole ($p=4$, and the finest mesh is used). For reference the analytical solution is also plotted. }
         \label{fig:platewithhole_contour}
 \end{figure}
 
@@ -1027,7 +1027,7 @@ Convergence plots for the relative error of the displacement and energy in the $
     \includegraphics[width=.5\linewidth]{s} & \includegraphics[width=.5\linewidth]{ns}\\
     $S-\mathcal{T}^{p} Q_4/Q_3$ & $NS-\mathcal{T}^{p} Q_4/Q_3$
     \end{tabular}
-        \caption{{\color{red} Can we change this to relative error?} Contour plots of $\vert{\sigma_{xx}-\sigma_{xx}^h}\vert$ for the plate with a circular hole ($p=4$, and the finest mesh is used).}
+        \caption{Contour plots of $\vert{\sigma_{xx}-\sigma_{xx}^h}\vert$ for the plate with a circular hole ($p=4$, and the finest mesh is used).}
         \label{fig:platewithhole_error_contour}
 \end{figure}
 \section{Conclusions}
