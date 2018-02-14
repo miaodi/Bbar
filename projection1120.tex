@@ -106,8 +106,7 @@ P.O. Box 970336, Orem, UT 84097, USA \\
 %\end{itemize}
 
 \begin{abstract}
-  We demonstrate the use of B\'{e}zier projection to alleviate locking phenomena in structural mechanics applications of isogeometric analysis. \added{Based on two different 	
-  interpretations of the well-known $\bar{B}$ projection, we propose two formulations and name them symmetric and non-symmetric B\'{e}zier $\bar{B}$ projection.} To demonstrate the utility of the \added{\Bezier projection} for both geometry and material locking phenomena we focus on transverse shear locking in Timoshenko beams and volumetric locking in nearly compressible linear elasticity although the approach can be applied generally to other types of locking phenemona as well. B\'{e}zier projection is a local projection technique with optimal approximation properties, which in many cases produces solutions that are comparable to global $L^2$ projection. In the context of $\bar{B}$ methods, the use of B\'ezier projection produces sparse stiffness matrices with only a slight increase in bandwidth when compared to standard displacement-based methods. Of particular importance is that the approach is applicable to any spline representation that can be written in B\'ezier form like NURBS, T-splines, LR-splines, etc. We discuss in detail how to integrate this approach into an existing finite element framework with minimal disruption through the use of B\'ezier extraction operators and a newly introduced dual \added{basis for} \Bezier \added{projection} operator. We then demonstrate the behavior of the two proposed formulations through several challenging benchmark problems.
+  In this paper we demonstrate the use of B\'{e}zier projection to alleviate locking phenomena in structural mechanics applications of isogeometric analysis. \added{Interpreting the well-known $\bar{B}$ projection in two different ways we develop two formulation for locking problems in beams and nearly incompressible elastic solids.  One formulation leads to a sparse symmetric symmetric system and the other leads to a sparse non-symmetric system.} To demonstrate the utility of the \added{\Bezier projection} for both geometry and material locking phenomena we focus on transverse shear locking in Timoshenko beams and volumetric locking in nearly compressible linear elasticity although the approach can be applied generally to other types of locking phenemona as well. B\'{e}zier projection is a local projection technique with optimal approximation properties, which in many cases produces solutions that are comparable to global $L^2$ projection. In the context of $\bar{B}$ methods, the use of B\'ezier projection produces sparse stiffness matrices with only a slight increase in bandwidth when compared to standard displacement-based methods. Of particular importance is that the approach is applicable to any spline representation that can be written in B\'ezier form like NURBS, T-splines, LR-splines, etc. We discuss in detail how to integrate this approach into an existing finite element framework with minimal disruption through the use of B\'ezier extraction operators and a newly introduced dual \added{basis for} the \Bezier \added{projection} operator. We then demonstrate the behavior of the two proposed formulations through several challenging benchmark problems.
 \end{abstract}
 \keywords{Isogeometric analysis, B\'ezier extraction, \added{\Bezier dual basis}, B\'ezier projection, $\bar{B}$-projection, locking}
 \section{Introduction}
@@ -122,7 +121,7 @@ Numerical locking in structural finite elements includes geometric locking in th
 
 In IGA, there is a growing literature on the treatment of locking in structural elements. Leveraging higher-order smoothness, transverse shear locking can be eliminated at the theoretical level by employing Kirchhoff-Love~\cite{kiendl_isogeometric_2009, kiendl_isogeometric_2015} and hierarchic Reissner-Mindlin~\cite{oesterle_hierarchic_2017, oesterle_shear_2016,echter_hierarchic_2013} shell elements. Reduced quadrature schemes have been explored in~\cite{adam_improved_2014, adam_improved_2015, adam_selective_2015} as a way to alleviate transverse shear locking. The extension of $\bar{B}$ projection to the isogeometric setting was initiated in~\cite{elguedj:hal-00457010} for both elastic and plastic problems and was extended in~\cite{bouclier_efficient_2013} to include local projection techniques~\cite{mitchell_method_2011,govindjee_convergence_2012}.
 
-\added{In this paper we introduce two methods that employ \Bezier projection to increase the sparsity of the stiffness matrix that results form $\bar{B}$ methods, which typically lead to a dense system. We call these methods the symmetric and non-symmetric \Bezier $\bar{B}$ projection methods based on the resulting symmetry of the stiffness method. We show that both methods result in a sparse stiffness matrix, reduce locking, and result in optimal (non-symmetric method) or near optimal (symmetric method) convergence rates.  We also perform an inf-sup analysis to help provide further insight into the behavior and quality of these methods.}
+\added{In this paper we introduce two methods that employ \Bezier projection to produce a localized approximation to the standard $\bar{B}$ method. The motivation behind these methods is the fact that $\bar{B}$ methods result in dense linear systems when used in the context of smooth higher-order basis functions, for example NURBS or other splines. The methods we introduce result in a sparse linear system irrespective of the choice of basis functions. We call these methods the symmetric and non-symmetric \Bezier $\bar{B}$ projection methods, where the names indicate the symmetry of the resulting stiffness matrix. We show that both methods result in a sparse stiffness matrix and reduce locking. We also show that optimal convergence rates are achieved in the case of the non-symmetric method and near optimal convergence rates are achieved in the case of the symmetric method.  We also perform an inf-sup analysis of these methods.}
 
 The outline of this paper is as follows: First, we briefly review spline basis functions in Section~\ref{sec:preliminaries}. In Sections~\ref{sec:extraction} and~\ref{sec:bproject}, we describe B\'ezier extraction and projection. We then formulate and use B\'ezier $\bar{B}$ projection for the Timoshenko beam (to treat transverse shear locking) and nearly incompressible elasticity (to treat volumetric locking) in Sections~\ref{sec:timoshenkobeam} and~\ref{sec:nearlyincompressible}, respectively. We provide detailed element level operations in both settings. We also presents numerical tests to show the performance of the proposed strategy. %We then conclude in Section~\ref{sec:conclusion}.
 
@@ -219,7 +218,7 @@ and
 \end{align}
 Note that efficiency gains can be had at the expense of accuracy by instead performing the integration in the parametric domain of the element~\cite{thomas_bezier_2015}. 
 
-The element-wise projection produces one control value for each element in the support of the function.  These values must be combined in order to provide the final control value.  A core component of the B\'ezier projection algorithm is the definition of an appropriate averaging operation. \added{The process of computing weights is illustrated in Figure~\ref{fig:weights}.} A weighted average of the values is computed using the weighting
+The element-wise projection produces one control value for each element in the support of the function.  These values must be combined in order to provide the final control value.  A core component of the B\'ezier projection algorithm is the definition of an appropriate averaging operation. \added{The process of computing the weights is illustrated in Figure~\ref{fig:weights}.} A weighted average of the values is computed using the weighting
 \begin{equation}\label{eqn:Bezier_weight}
 \omega_a^e=\dfrac{\int_{\Omega^e} N_{a}^e \, d\Omega}{\int_{\Omega^A} N_{A(e,a)} \, d\Omega}
 \end{equation}
@@ -284,7 +283,9 @@ the algorithm proceeds as follows:
 
 \subsection{Dual basis formulation of B\'{e}zier projection}
 \label{sec:dual-funct-dual}
-To integrate \Bezier projection into a standard finite element assembly algorithm, it is convenient to recast \Bezier projection in terms of a dual basis. \added{This approach plays a key role in developing the non-symmetric \Bezier $\bar{B}$ method discussed in Section~\ref{sec:non-symmetric}.} A dual basis has the distinguishing property that
+To integrate \Bezier projection into a standard finite element assembly algorithm, it is convenient to recast \Bezier projection in terms of a dual basis. 
+%\added{This approach plays a key role in developing the non-symmetric \Bezier $\bar{B}$ method discussed in Section~\ref{sec:non-symmetric}.} 
+A dual basis has the distinguishing property that
 \begin{align}
   \int_{\Omega} \hat{N}_A N_B \, d\Omega = \delta_{AB}.
   \end{align}
@@ -391,7 +392,7 @@ where $\gamma$ is the shear strain, $\kappa$ is the bending strain, $\omega$ is 
 
 \subsection{Symmetric \Bezier $\bar{B}$ projection}
 \label{sec:symmetric-projection}
-{\color{blue}For the Timoshenko beam, it is the transverse shear that causes locking. Hence, under the framework of $\bar{B}$ projection, the shear strain $\gamma$ is projected onto a lower order function space. The projected shear strain $\bar{\gamma}$ is used when solving the strain energy minimization problem. Here we use the \Bezier projection operator to obtain $\bar{\gamma}$, and refer to it as the Symmetric \Bezier $\bar{B}$ projection method because the resulting stiffness matrix is symmetric.}
+{\color{blue}Locking is caused in Timoshenko beam problems by the transverse shear. To reduce the effects of locking for these problems the $\bar{B}$ method projects the shear strain, $\gamma$, onto a lower order function space. This process produces a projected shear strain, which we call $\bar{\gamma}$,  that is substituted into the weak form of the problem statement. In this section we use the \Bezier projection operator to compute an approximation of $\bar{\gamma}$, and refer to this approach as the symmetric \Bezier $\bar{B}$ projection method because the resulting stiffness matrix is symmetric.}
 
 \subsubsection{The weak form}
 
@@ -408,7 +409,7 @@ where $\gamma$ is the shear strain, $\kappa$ is the bending strain, $\omega$ is 
   \added{\omega = \sum_A \omega_A N_A} \\
   \added{\phi = \sum_A \phi N_A}
 \end{align}
-where \added{$N_A$ is a degree $p$ spline basis function, $\omega_A$ and $\phi_A$ are the corresponding control point values.}. \added{The shear strain and bending strain can then be expressed as}
+where \added{$N_A$ is a degree $p$ spline basis function and $\omega_A$ and $\phi_A$ are the corresponding control point values. The shear strain and bending strain can then be expressed as}
 {\color{blue}\begin{align}
 \gamma &= \sum_A{\begin{bmatrix}N'_A & -N_A\end{bmatrix}\begin{bmatrix}\omega_A & \phi_A\end{bmatrix}^T} \\
 \kappa &= \sum_A\begin{bmatrix}0 & N'_A\end{bmatrix}\begin{bmatrix}\omega_A & \phi_A\end{bmatrix}^T
@@ -463,20 +464,21 @@ and $\A$ is the standard finite element assembly operator \cite{hughes_finite_20
 \subsection{Non-symmetric \Bezier $\bar{B}$ projection}
 \label{sec:non-symmetric}
 
-\added{The relationship between $\bar{B}$-formulations and mixed formulations has been studied and it has been shown by Simo and Hughes \cite{hughes_variational_1986} that they are equivalent. However, the symmetric \Bezier $\bar{B}$ projection method presented in Section~\ref{sec:symmetric-projection}, where we started by considered the $\bar{B}$ formulation as a strain projection method, lacks this connection to mixed formulations (we will show this in the following section). In this section we present a second method based on \Bezier projection in which we view the $\bar{B}$ formulation as a mixed formulation with the auxiliary variable (the shear stress for the case of Timoshenko beam) being eliminated. Taking advantage of the dual basis formulation of the \Bezier projection operator we can incorporate \Bezier projection into the mixed formulation by using the \Bezier dual basis functions as the test functions of the auxiliary variable. Since the resulting stiffness matrix is not symmetric, this formulation is referred to as the non-symmetric \Bezier $\bar{B}$ projection method. Although this method does not preserve symmetry we will show that it does preserve convergence rates.}
+\added{Simo and Hughes \cite{hughes_variational_1986} have shown that $\bar{B}$ formulations and mixed formulations are equivalent. However, the development of the symmetric \Bezier $\bar{B}$ projection method presented in Section~\ref{sec:symmetric-projection}, where we began by considered the $\bar{B}$ formulation as a strain projection method, lacks a connection to mixed formulations. In this section we present a second method based on \Bezier projection in which we view the $\bar{B}$ formulation as a mixed formulation where, for the Timoshenko beam problem, the auxiliary variable is the shear strain.  In this method we use the \Bezier dual basis functions as the test functions for the auxiliary variable. Once the problem has been cast as a mixed formulation we then eliminate the auxiliary variable to get a purely displacement based formulation. This method preserves convergence rates and all assembly routines of the stiffness matrix can be performed at the element level, but it does lead to a non-symmetric stiffness matrix.}
+
 \subsubsection{The weak form}
-\added{In the mixed formulation, the shear stress $\tau=sGA\gamma$ is taken as a new independent variable. The weak form of the mixed formulation is then of the following form: find $\mathbf{u}\in{\mathcal{S}(\Omega)}$ and $\tau\in{L}^2(\Omega)$ such that for all $\mathbf{w}\in{\mathcal{V}(\Omega)}$ and $\delta\tau\in{L}^2(\Omega)$}
+\added{In the mixed formulation for the Timoshencko beam problem the shear stress, $\tau=sGA\gamma$, is taken as a new independent variable. The weak form of the mixed formulation problem is then stated as: find $\mathbf{u}\in{\mathcal{S}(\Omega)}$ and $\tau\in{L}^2(\Omega)$ such that for all $\mathbf{w}\in{\mathcal{V}(\Omega)}$ and $\delta\tau\in{L}^2(\Omega)$}
 \begin{align}
     \int_{0}^L\kappa(\mathbf{w})EI\kappa(\mathbf{u}) + {\gamma}(\mathbf{w})\tau \, dx&= l\langle{\mathbf{w}}\rangle\\
     \int_{0}^L\delta\tau(sGA\gamma(\mathbf{u})-\tau) \, dx &= 0.
 \end{align}
 \subsubsection{Discretization}
-\added{In the finite element formulation of the mixed form, the discretization of $\mathbf{u}$ and $\mathbf{w}$ remain the same. Since the shear strain and its variation are in $L^2(\Omega)$, their finite element approximation can be made from functions with poor regularity e.g. discontinuous polynomials. For consistency, if the field $\mathbf{u}$ is discretized by $p^{th}$ degree spline  basis functions defined by the knot vector \eqref{eq:origin_knot_vector}, the shear stress $\tau$ is then discretized by $p-1^{th}$ degree spline basis functions defined by the knot vector \eqref{eq:projected_knot_vector} and its variation $\delta\tau$ is discretized by the corresponding dual basis functions, as}
+\added{In the finite element formulation of the mixed problem the discretization of $\mathbf{u}$ and $\mathbf{w}$ remain the same. The shear strain and its variation, however, are in $L^2(\Omega)$, so their finite element approximation can be made from functions with lower regularity, such as discontinuous polynomials. When the field $\mathbf{u}$ is discretized by $p^{th}$ degree spline basis functions defined by the knot vector given in \eqref{eq:origin_knot_vector}, we chose the $p-1^{th}$ degree spline basis functions defined by the knot vector given in \eqref{eq:projected_knot_vector} to discretize the shear stress $\tau$ and the corresponding dual basis to discretize its variation $\delta\tau$. The discrete form of the shear stress and its variation are given by}
 \begin{align}
     \tau&=\sum_A\tau_A\bar{N}_A \\
-    \delta\tau&=\sum_A\delta\tau_A\hat{\bar{N}}_A
+    \delta\tau&=\sum_A\delta\tau_A\hat{\bar{N}}_A.
 \end{align}
-\added{The stiffness matrix for the mixed form can be written as}
+\added{The stiffness matrix for the mixed form can then be written as}
 \begin{equation}
    \mathbf{K}_{mix} =  
     \begin{bmatrix}
@@ -489,11 +491,11 @@ and $\A$ is the standard finite element assembly operator \cite{hughes_finite_20
 \begin{equation}
     \mathbf{P}=\A_e\mathbf{P}_e,
 \end{equation}
-with
+\added{and}
 \begin{equation}
     \mathbf{P}_e=\bar{\mathbf{C}}^e\langle{\bar{\mathbf{B}}_e^T,\mathbf{B}^\gamma_e}\rangle(\mathbf{C}^e)^T.
 \end{equation}
-\added{The control variable of shear stress in \eqref{eq:mixed_timoshenko} can be eliminated, which leads to a pure displacement formulation as}
+\added{We can now eliminate the control variable of the shear stress from \eqref{eq:mixed_timoshenko} to get a pure displacement formulation where the stiffness matrix can be written as}
 \begin{equation}
     \mathbf{K}=\mathbf{K}^b+\bar{\mathbf{K}}^s_{NS}, 
 \end{equation}
@@ -502,7 +504,7 @@ where
     \bar{\mathbf{K}}^s_{NS}=sGA\mathbf{P}^T\hat{\mathbf{P}}.
     \label{eq:nonsymmetric_timoshenko}
 \end{equation}
-\added{Compared to \eqref{eq:symmetric_timoshenko}, the formulation of the shear strain contribution to the stiffness matrix shown in \eqref{eq:nonsymmetric_timoshenko} requires one less matrix operation. One can note that, due to the different choices of the function spaces for the shear stress and its variation, the global stiffness matrix is no longer symmetric.}
+\added{We can see that use of different function spaces for the shear strain and its variation leads to a non-symmetric stiffness matrix.}
 
 \paragraph{Remark} \added{ The symmetric \Bezier $\bar{B}$ formulation is not consistent with a mixed formulation. To see this we can recover the mixed formulation of \eqref{eqn:symmetric_b_bar_timoshenko_stiffness}, which is}
 \begin{equation}
@@ -511,7 +513,7 @@ where
         sGA\hat{\mathbf{P}} & -\bar{\mathbf{M}}^{-1}
     \end{bmatrix},
 \end{equation}
-\added{where both the shear stress and its variation are discretized by the dual basis functions. However, for the inner product of dual basis functions }
+\added{where both the shear stress and its variation are discretized by the dual basis functions. However, for the inner product of dual basis functions we have}
 \begin{equation}
     \langle{\hat{\bar{N}}_i,\hat{\bar{N}}_j}\rangle\neq{\bar{\mathbf{M}}^{-1}_{ij}},
 \end{equation}
@@ -553,7 +555,7 @@ The increased bandwidth of the \added{symmetric} B\'ezier $\bar{B}$ method when 
 \begin{align}
 	\bar{\mathbf{K}}^s_2 = \sum_{i=1}^3 \sum_{j=1}^3 \mathbf{P}_i^T\bar{\mathbf{M}}_2\mathbf{P}_j
 \end{align}
-and the term of this summation that results in the coupling between $N_{1}$ and $N_{5}$ is $\mathbf{P}_1^T\bar{\mathbf{M}}_2\mathbf{P}_3$, where $\mathbf{P}_1$ is the inner product of $N_{1}$ and $\hat{\bar{N}}_{2}$, $\mathbf{P}_3$ is the inner product of $N_{5}$ and $\hat{\bar{N}}_{3}$, and $\bar{\mathbf{M}}_2$ is the inner product of $\bar{N}_{2}$ and $\bar{N}_{3}$. We can see from Figure~\ref{fig:IGAelement} that $\operatorname{supp}(N_{1})\cap{}\operatorname{supp}(\hat{\bar{N}}_{2})=\Omega_1$, $\operatorname{supp}(N_{5})\cap{}\operatorname{supp}(\hat{\bar{N}}_{3})=\Omega_3$ and $\operatorname{supp}(\bar{N}_{2})\cap{}\operatorname{supp}(\bar{N}_{3})=\Omega_2$, so that $\mathbf{P}_1^T\bar{\mathbf{M}}_2\mathbf{P}_3$ is not zero. Thus we have increased the number of nonzero coefficients in the shear stiffness matrix. However, the same exercise can be used to show that there is no coupling between $N_{0}$ and $N_{6}$ for this set of basis functions so matrix is not dense. \added{With the abscense of the gramian matrix in the formulation of the shear stiffness matrix, the bandwidth of the non-symmetric B\'ezier $\bar{B}$ method is reduced further.} In fact, from the formulation of the element stiffness matrix, we can show that the bandwidth of the stiffness matrix of the symmetric B\'ezier $\bar{B}$ and non-symmetric B\'ezier $\bar{B}$ methods for the Timoshenko beam are $6p-3$ and $4p-1$, respectively. 
+and the term of this summation that results in the coupling between $N_{1}$ and $N_{5}$ is $\mathbf{P}_1^T\bar{\mathbf{M}}_2\mathbf{P}_3$, where $\mathbf{P}_1$ is the inner product of $N_{1}$ and $\hat{\bar{N}}_{2}$, $\mathbf{P}_3$ is the inner product of $N_{5}$ and $\hat{\bar{N}}_{3}$, and $\bar{\mathbf{M}}_2$ is the inner product of $\bar{N}_{2}$ and $\bar{N}_{3}$. We can see from Figure~\ref{fig:IGAelement} that $\operatorname{supp}(N_{1})\cap{}\operatorname{supp}(\hat{\bar{N}}_{2})=\Omega_1$, $\operatorname{supp}(N_{5})\cap{}\operatorname{supp}(\hat{\bar{N}}_{3})=\Omega_3$ and $\operatorname{supp}(\bar{N}_{2})\cap{}\operatorname{supp}(\bar{N}_{3})=\Omega_2$, so that $\mathbf{P}_1^T\bar{\mathbf{M}}_2\mathbf{P}_3$ is not zero. Thus we have increased the number of nonzero coefficients in the shear stiffness matrix. However, the same exercise can be used to show that there is no coupling between $N_{0}$ and $N_{6}$ for this set of basis functions so the matrix is not dense. \added{the bandwidth of the non-symmetric B\'ezier $\bar{B}$ method is reduced further. This is because the Gramian matrix does not appear in the this formulation.} In fact, from the formulation of the element stiffness matrix, we can show that the bandwidth of the stiffness matrix of the symmetric B\'ezier $\bar{B}$ and non-symmetric B\'ezier $\bar{B}$ methods for the Timoshenko beam are $6p-3$ and $4p-1$, respectively. 
 
 \paragraph{Remark} In \cite{bouclier_efficient_2013} a local $\bar{B}$ method for shells was proposed that was based on the local least squares method presented in \cite{govindjee_convergence_2012}. This approach has a similar structure to the \added{symmetric B\'ezier $\bar{B}$} method presented here. However, it was shown in~\cite{thomas_bezier_2015} that choosing (\ref{eqn:Bezier_weight}) as the weighting provides a significant increase in the accuracy of the approximation.
 
@@ -749,7 +751,7 @@ where
 \end{align}
 \subsection{Non-symmetric \Bezier $\bar{B}$ projection}
 \subsubsection{The weak form}
-\added{In the context of nearly incompressible elasticity, the pressure $p$ can be viewed as an independent unknown, leading to a mixed formulation, as: find $\mathbf{u}\in{\mathcal{S}(\Omega)}$ and $p\in{L}^2(\Omega)$ such that for all $\mathbf{w}\in{\mathcal{V}(\Omega)}$ and $\delta{p}\in{L}^2(\Omega)$}
+\added{A mixed formulation for nearly incompressible elasticity can be developed by considering the pressure $p$ as an independent variable. The weak statement of the problem is then given as: find $\mathbf{u}\in{\mathcal{S}(\Omega)}$ and $p\in{L}^2(\Omega)$ such that for all $\mathbf{w}\in{\mathcal{V}(\Omega)}$ and $\delta{p}\in{L}^2(\Omega)$}
 \begin{align}
     \hat{a}\langle{\mathbf{w},\mathbf{u}}\rangle-b\langle{\mathbf{w},p}\rangle&=l\langle{\mathbf{w}}\rangle, \\
     - b\langle{\mathbf{u},\delta{p}}\rangle-\dfrac{1}{(\lambda+2\mu/3)}\int_{\Omega}\delta{p}pd\Omega&=0,
@@ -763,7 +765,7 @@ where
 
 \subsubsection{\added{Discretization}}
 
-Following the same pattern as the non-symmetric \Bezier $\bar{B}$ method for the Timoshenko beam problem, we keep the discretization of $\mathbf{u}$ and $\mathbf{w}$ untouched, while using lower order spline basis functions and corresponding dual basis functions for the discretization of pressure $p$ and its variation $\delta{p}$, respectively. The discretized stiffness matrix in mixed form can be written as
+Following the same pattern as the non-symmetric \Bezier $\bar{B}$ method for the Timoshenko beam problem, we use the same discretization for $\mathbf{u}$ and $\mathbf{w}$ and use lower order spline basis functions and corresponding dual basis functions for the discretization of pressure $p$ and its variation $\delta{p}$, respectively. The discretized stiffness matrix in mixed form can be written as
 \begin{equation}
     \mathbf{K}_{mix}=
     \begin{bmatrix}
@@ -779,7 +781,7 @@ with
 \begin{equation}
     \mathbf{P}_e^{vol}=\bar{\mathbf{C}}^e\langle{\bar{\mathbf{B}}_e^T,\mathbf{B}^{vol}_e}\rangle(\mathbf{C}^e)^T.
 \end{equation}
-By eliminating the pressure control points, we obtain the pure displacement formulation as
+By eliminating the pressure control variables, we obtain a pure displacement formulation with the stiffness matrix taking the form
 \begin{equation}
 	\mathbf{K} = \mathbf{K}^{dev} + \bar{\mathbf{K}}^{vol}_{NS},
 \end{equation}
@@ -787,7 +789,7 @@ where
 \begin{equation}
     \bar{\mathbf{K}}^{vol}_{NS}=(\lambda+2\mu/3){\mathbf{P}}^T\hat{\mathbf{P}}.
 \end{equation}
-We note, that in contrast to the symmetric \Bezier $\bar{B}$ method, the assembly of the stiffness matrix in this case can be performed in the standard way with no need for global matrix operations.
+We note again, that in contrast to the symmetric \Bezier $\bar{B}$ method, the assembly of the stiffness matrix in this case can be performed in the standard way with no need for global matrix operations.
  
 \subsection{Numerical results}
 \added{We begin this section by numerically evaluating the inf��-sup constant for the global $\bar{B}$ and non-symmetric \Bezier $\bar{B}$ methods.} 
@@ -795,13 +797,13 @@ We then investigate the performance of the B\'{e}zier $\bar{B}$ method for two n
 
 \subsubsection{\added{Numerical evaluation of the inf-sup condition}}
 
-The inf-sup condition is also refered to as the Ladyzhenskaya-Babuska-Brezzi condition (or simply LBB). It is a crucial condition to ensure the solvability, stability and optimality of a mixed problem. For the nearly incompressible elasticity problem, the inf-sup condition is, for $\delta{p}\neq{0}$ and $\mathbf{u}\neq{0}$
+The inf-sup condition is also refered to as the Ladyzhenskaya-Babuska-Brezzi condition (or simply LBB). It is a crucial condition to ensure the solvability, stability and optimality of a mixed problem. For the nearly incompressible elasticity problem the inf-sup condition is stated as: for $\delta{p}\neq{0}$ and $\mathbf{u}\neq{0}$
 \begin{equation}
     \inf_{\delta{p}\in{L^2(\Omega)}}\sup_{\mathbf{u}\in\mathcal{S}(\Omega)}\dfrac{\vert{b\langle{\mathbf{u},\delta{p}}\rangle}\vert}{\|{\delta{p}}\|_{L^2(\Omega)}\|{\mathbf{u}}\|_{H^1(\Omega)}}\geq\beta>0.
 \end{equation}
 In a discretized problem, the inf-sup condition requires the variable $\beta$ to be a constant that is independent of the mesh size.\par
 
-Here, we consider the inf-sup condition of a uniformly refined quarter annulus. The geometry and boundary conditions are demonstrated in Figure \ref{fig:quarter_annulus}. The geometry of the quarter annulus can be exactly represented using a biquadratic NURBS basis. The knot vector for the coarsest discretization is given by
+Here, we consider the inf-sup condition of a uniformly refined quarter annulus. The geometry and boundary conditions are shown in Figure \ref{fig:quarter_annulus}. The geometry of the quarter annulus can be exactly represented using a biquadratic NURBS basis. The knot vector for the coarsest discretization is given by
 \begin{align}
 \begin{split}
 \Xi_\xi\times\Xi_\eta=\lbrace{0,0,0,1,1,1}\rbrace\times\lbrace{0,0,0,1,1,1}\rbrace
@@ -872,7 +874,7 @@ i    & $B_{i,1} $ & $B_{i,2}$ & $B_{i,3}$\\
 \end{figure}
 
 
-Only the global $\bar{B}$ method and the non-symmetric \Bezier $\bar{B}$ method are considered here, as the symmetric \Bezier $\bar{B}$ method lacks a connection to the mixed formulation. As a counter example, the well-known pair $Q_p/Q_p$ of the global $\bar{B}$ method that violates the inf-sup condition is also tested here. Our tests follow the procedure proposed by Chapelle and Bathe in \cite{chapelle_inf-sup_1993}.\par
+Only the global $\bar{B}$ method and the non-symmetric \Bezier $\bar{B}$ method are considered here, as the symmetric \Bezier $\bar{B}$ method lacks a connection to a mixed formulation. As a counter example, the well-known pair $Q_p/Q_p$ of the global $\bar{B}$ method that violates the inf-sup condition is also tested here. Our tests follow the procedure proposed by Chapelle and Bathe in \cite{chapelle_inf-sup_1993}.\par
 \begin{figure}[htb!]
     \centering
     \begin{subfigure}[b]{0.31\linewidth}        %% or \columnwidth
@@ -892,7 +894,7 @@ Only the global $\bar{B}$ method and the non-symmetric \Bezier $\bar{B}$ method 
     \label{fig:inf_sup}
 \end{figure}
 
-Figure \ref{fig:inf_sup} shows the numerical results. As can be seen, the global $\bar{B}$ method and the non-symmetric \Bezier $\bar{B}$ method are not strictly satisfying the LBB condition, which is consistent with the statement that the global $\bar{B}$ method does not reduce the constraints sufficiently to satisfy LBB condition in \cite{elguedj:hal-00457010}. But compared to the $Q_p/Q_p$ pair, both methods reduce constraints to a favorable level. Comparing the global $\bar{B}$ method with non-symmetric \Bezier $\bar{B}$ method, their stability parameter $\beta$ decrease in the same rate and the stability parameter for the non-symmetric \Bezier $\bar{B}$ method is slightly lower than that for the global $\bar{B}$ method, which indicate a similar optimality in convergence for both methods and a slightly higher error for the non-symmetric \Bezier $\bar{B}$ method.
+Figure \ref{fig:inf_sup} shows the numerical results. As can be seen, the global $\bar{B}$ method and the non-symmetric \Bezier $\bar{B}$ method do not strictly satisfy the LBB condition since $\beta$ is not independent of the mesh size. This result is consistent with the statement made in \cite{elguedj:hal-00457010} that the global $\bar{B}$ method does not reduce the constraints sufficiently to satisfy the LBB condition. However, compared to the $Q_p/Q_p$ pair, both methods reduce constraints to a more favorable level. If we compare the results for the global $\bar{B}$ method with the non-symmetric \Bezier $\bar{B}$ method we see that their stability parameter $\beta$ decreases at the same rate and the stability parameter for the non-symmetric \Bezier $\bar{B}$ method is slightly lower than that for the global $\bar{B}$ method. These results indicate a similar optimality in convergence for both methods and a slightly higher error for the non-symmetric \Bezier $\bar{B}$ method.
 
 \subsubsection{Cook's membrane problem}
 
@@ -988,11 +990,9 @@ The setup for the infinite plate with a circular hole problem is shown in Figure
 	\label{fig:platewithhole_geometry}
 \end{figure}
 
+Convergence plots for the relative error of the displacement and energy in the $L^2$ norm are shown in Figure \ref{fig:platewithhole_convergence}. As can be seen, the standard $Q_p$ approximations suffer from severe volumetric locking for all orders while, on the other hand, the $\bar{B}$ methods remedy locking for all cases. \added{For the symmetric \Bezier $\bar{B}$ method, optimal rates are achieved in all three measures for biquadratic elements and the optimal energy convergence has been achieved for bicubic elements, but convergence has degraded in all three measures for the biquartic elements. This reduction in convergence rates results from the fact that the derivation of the symmetric \Bezier $\bar{B}$ method is purely based on the engineering analogy between the $L^2$ projection and \Bezier projection operations. The non-symmetric \Bezier $\bar{B}$ method, on the other hand, achieves optimal convergence in the displacement, stress, and energy norms for all elements with slightly higher errors than those of the global $\bar{B}$ method.}
 
-
-Convergence plots for the relative error of the displacement and energy in the $L^2$ norm are shown in Figure \ref{fig:platewithhole_convergence}. As can be seen, the standard $Q_p$ approximations suffer from severe volumetric locking for all orders while, on the other hand, the $\bar{B}$ methods remedy locking for all cases. \added{For the symmetric \Bezier $\bar{B}$ method, the optimality in all three measures has been obtained for biquadratic elements; the optimal energy convergence rate has been achieved for bicubic elements; however, the degradation of convergence rates in all three measures has been observed for biquartic elements. The can be attributed to the fact that the derivation of the symmetric \Bezier $\bar{B}$ method is purely based on the engineering analogy between the $L^2$ projection and \Bezier projection. On the other hand, the non-symmetric \Bezier $\bar{B}$ method, derived from the mixed formulation, is optimal for displacement, stress and energy for all elements with slightly higher errors than that of global $\bar{B}$ method, which agrees with the inf-sup test.}\par
-
-\added{Contour plots of  $\sigma_{xx}$ for biquartic elements of the finest mesh are shown in Figure \ref{fig:platewithhole_contour}. We note that, for the finest mesh, results from all $\bar{B}$ methods are consistent with the reference solution, while using standard finite element results in large errors in the stress. Figure \ref{fig:platewithhole_error_contour} shows the absolute error of $\sigma_{xx}$ with the same mesh. As can be seen, the projection methods reduce error to an acceptable level (less than $.1\%$ of the maximal $\sigma_{xx}$) while the error the $Q_4$ element is at the same level of the maximal $\sigma_{xx}$. Here we can also see that the non-symmetric method has a slight improvement compared to the symmetric method.}
+\added{Contour plots of  $\sigma_{xx}$ from the finest biquartic discretization are shown in Figure \ref{fig:platewithhole_contour}. We can see that results from all $\bar{B}$ methods are consistent with the reference solution, but using the standard finite element approach results meaningless stresses. Figure \ref{fig:platewithhole_error_contour} shows the absolute error of $\sigma_{xx}$ from the same discretization. We can see that the projection methods produce an error of less than $.1\%$ of the maximum $\sigma_{xx}$, while the error for the standard $Q_4$ element is of the same order as the maximum $\sigma_{xx}$. We can also see that the non-symmetric method provides a slight improvement when compared to the symmetric method.}
 \begin{figure}[h]
     \center
 \begin{tabular}{ccc}
@@ -1033,11 +1033,11 @@ Convergence plots for the relative error of the displacement and energy in the $
 \section{Conclusions}
 \label{sec:conclusion}
 
-We have presented two B\'{e}zier $\bar{B}$ projection methods, which we have called symmetric and non-symmetric \Bezier $\bar{B}$ projection, as an approach to overcome locking phenomena in structural mechanics applications of isogeometric analysis while maintaining sparsity of the resulting linear system. The methods utilize B\'ezier extraction and projection, which makes it simple to implement them in an existing finite element framework and makes it applicable to any spline representation which can be written in \Bezier form. In contrast to global $\bar{B}$ methods, which produce dense stiffness matrices, the B\'ezier $\bar{B}$ approach results in a sparse stiffness matrix while still benefiting from higher-order convergence rates. \added{We have made the connection between the non-symmetric method and mixed formulations and shown that although this method does not strictly satisfy the inf-sup condition it reduces constraints sufficiently to provide optimal convergence rates for the problems studied here.}
+We have presented two B\'{e}zier $\bar{B}$ projection methods, which we have called symmetric and non-symmetric \Bezier $\bar{B}$ projection, as an approach to overcome locking phenomena in structural mechanics applications of isogeometric analysis while maintaining sparsity of the resulting linear system. The methods utilize B\'ezier extraction and projection, which makes it simple to implement them in an existing finite element framework and makes it applicable to any spline representation which can be written in \Bezier form. In contrast to global $\bar{B}$ methods, which produce dense stiffness matrices, the B\'ezier $\bar{B}$ approach results in a sparse stiffness matrix while still benefiting from higher-order convergence rates. \added{We have made the connection between the non-symmetric method and a mixed formulation and shown that, although this method does not strictly satisfy the inf-sup condition, it reduces constraints sufficiently to provide optimal convergence rates for the problems studied here.}
 
-We have demonstrated the performance of the approach in the context of shear deformable beams (to alleviate transverse shear locking) and nearly incompressible elasticity problems (to alleviate volumetric locking). The proposed method reduces locking errors and achieves (nearly) optimal convergence rates \added{ for the symmetric method and optimal rates for the non-symmetric method}. The cases where optimal rates were not achieved \added{when using the the symmetric formulation are a symptom of the fact that the symmetric formulation is not directly related to a variational principle so it may not satisfy the inf-sup condition}.
+We have demonstrated the performance of the approach in the context of shear deformable beams (to alleviate transverse shear locking) and nearly incompressible elasticity problems (to alleviate volumetric locking). The proposed method reduces locking errors and achieves nearly optimal convergence rates \added{ for the symmetric method and optimal rates for the non-symmetric method}. The cases where optimal rates were not achieved \added{when using the the symmetric formulation are a symptom of the fact that the symmetric formulation is not directly related to a variational principle}.
 
-\added{These two methods provide a choice between a formulation that results in a symmetric stiffness matrix but requires matrix operations at the global level and potentially less accuracy and a formulation that results in a non-symmetric stiffness matrix that can be assembled in the standard element routine approach and achieves optimal convergence rates. The trade offs are between higher costs in assembly for the symmetric formulation versus potentially higher costs in solving a non-symmetric system for the non-symmetric formulation. In either case, however, the cost is less than using the standard $\bar{B}$ formulation.}
+\added{The two methods presented here provide a choice between a formulation that results in a symmetric stiffness matrix but requires matrix operations at the global level and potentially less accuracy and a formulation that results in a non-symmetric stiffness matrix that can be assembled in the standard element routine approach and achieves optimal convergence rates. The trade offs are between higher costs in assembly for the symmetric formulation versus potentially higher costs in solving a non-symmetric system for the non-symmetric formulation. In either case, however, the cost is less than using the standard $\bar{B}$ formulation.}
 \bibliographystyle{elsarticle-num}
 \bibliography{bibliography}
 \end{document}
