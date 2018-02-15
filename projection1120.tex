@@ -796,7 +796,7 @@ We then investigate the performance of the B\'{e}zier $\bar{B}$ method for two n
 
 \subsubsection{\added{Numerical evaluation of the inf-sup condition}}
 
-The inf-sup condition is also refered to as the Ladyzhenskaya-Babuska-Brezzi condition (or simply LBB). It is a crucial condition to ensure the solvability, stability and optimality of a mixed problem. For the nearly incompressible elasticity problem the inf-sup condition is stated as: for $\delta{p}\neq{0}$ and $\mathbf{u}\neq{0}$
+The inf-sup condition is also refered to as the Ladyzhenskaya-Babuska-Brezzi condition (or simply LBB)~\cite{babuvska1973finite, brezzi1974existence, ladyzhenskaya1969mathematical}. It is a crucial condition to ensure the solvability, stability and optimality of a mixed problem. For the nearly incompressible elasticity problem the inf-sup condition is stated as: for $\delta{p}\neq{0}$ and $\mathbf{u}\neq{0}$
 \begin{equation}
     \inf_{\delta{p}\in{L^2(\Omega)}}\sup_{\mathbf{u}\in\mathcal{S}(\Omega)}\dfrac{\vert{b\langle{\mathbf{u},\delta{p}}\rangle}\vert}{\|{\delta{p}}\|_{L^2(\Omega)}\|{\mathbf{u}}\|_{H^1(\Omega)}}\geq\beta>0.
 \end{equation}

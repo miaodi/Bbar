@@ -239,6 +239,20 @@ J.~Kiendl, F.~Auricchio, T.~J.~R. Hughes, A.~Reali, Single-variable
   formulations and isogeometric discretizations for shear deformable beams,
   Computer Methods in Applied Mechanics and Engineering 284 (2015) 988--1004.
 
+\bibitem{babuvska1973finite}
+I.~Babu{\v{s}}ka, The finite element method with lagrangian multipliers,
+  Numerische Mathematik 20~(3) (1973) 179--192.
+
+\bibitem{brezzi1974existence}
+F.~Brezzi, On the existence, uniqueness and approximation of saddle-point
+  problems arising from lagrangian multipliers, Revue fran{\c{c}}aise
+  d'automatique, informatique, recherche op{\'e}rationnelle. Analyse
+  num{\'e}rique 8~(R2) (1974) 129--151.
+
+\bibitem{ladyzhenskaya1969mathematical}
+O.~A. Ladyzhenskaya, The mathematical theory of viscous incompressible flow,
+  Vol.~12, Gordon \& Breach New York, 1969.
+
 \bibitem{chapelle_inf-sup_1993}
 D.~Chapelle, K.~J. Bathe, The inf-sup test, Computers \& Structures 47~(4)
   (1993) 537 -- 545.
