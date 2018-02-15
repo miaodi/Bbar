@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.5)  14 FEB 2018 11:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.5)  15 FEB 2018 11:50
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1421,31 +1421,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 399--400
 <Global.pdf, id=127, pagebox=cropbox, 273.54898pt x 273.54898pt>
 File: Global.pdf Graphic file (type pdf)
 <use Global.pdf>
-Package pdftex.def Info: Global.pdf  used on input line 528. on input line 528.
+Package pdftex.def Info: Global.pdf  used on input line 529. on input line 529.
 
 Package pdftex.def Info: Requested size: 116.08989pt x 116.08772pt on input lin
-e 528.
+e 529.
 <B_extraction.pdf, id=128, pagebox=cropbox, 273.54898pt x 273.54898pt>
 File: B_extraction.pdf Graphic file (type pdf)
 <use B_extraction.pdf>
-Package pdftex.def Info: B_extraction.pdf  used on input line 534. on input lin
-e 534.
+Package pdftex.def Info: B_extraction.pdf  used on input line 535. on input lin
+e 535.
 Package pdftex.def Info: Requested size: 116.08989pt x 116.08772pt on input lin
-e 534.
+e 535.
 <LB_extraction.pdf, id=129, pagebox=cropbox, 273.54898pt x 273.54898pt>
 File: LB_extraction.pdf Graphic file (type pdf)
 <use LB_extraction.pdf>
-Package pdftex.def Info: LB_extraction.pdf  used on input line 540. on input li
-ne 540.
+Package pdftex.def Info: LB_extraction.pdf  used on input line 541. on input li
+ne 541.
 Package pdftex.def Info: Requested size: 116.08989pt x 116.08772pt on input lin
-e 540.
+e 541.
 <NS-LB_extraction.pdf, id=130, pagebox=cropbox, 273.54898pt x 273.54898pt>
 File: NS-LB_extraction.pdf Graphic file (type pdf)
 <use NS-LB_extraction.pdf>
-Package pdftex.def Info: NS-LB_extraction.pdf  used on input line 546. on input
- line 546.
+Package pdftex.def Info: NS-LB_extraction.pdf  used on input line 547. on input
+ line 547.
 Package pdftex.def Info: Requested size: 116.08989pt x 116.08772pt on input lin
-e 546.
+e 547.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no à in font cmr10!
 Missing character: There is no è in font cmr10!
@@ -1453,72 +1453,72 @@ Missing character: There is no è in font cmr10!
 <basis_dual.pdf, id=134, pagebox=cropbox, 288.52795pt x 310.3866pt>
 File: basis_dual.pdf Graphic file (type pdf)
 <use basis_dual.pdf>
-Package pdftex.def Info: basis_dual.pdf  used on input line 564. on input line 
-564.
+Package pdftex.def Info: basis_dual.pdf  used on input line 565. on input line 
+565.
 Package pdftex.def Info: Requested size: 241.84842pt x 260.1783pt on input line
- 564.
+ 565.
  [11 <./Global.pdf> <./B_extraction.pdf> <./LB_extraction.pdf> <./NS-LB_extract
 ion.pdf> <./basis_dual.pdf>]
 <beam_load.pdf, id=153, pagebox=cropbox, 152.9725pt x 57.30508pt>
 File: beam_load.pdf Graphic file (type pdf)
 <use beam_load.pdf>
-Package pdftex.def Info: beam_load.pdf  used on input line 583. on input line 5
-83.
+Package pdftex.def Info: beam_load.pdf  used on input line 584. on input line 5
+84.
 Package pdftex.def Info: Requested size: 193.47577pt x 72.47932pt on input line
- 583.
+ 584.
 <w-sin.pdf, id=154, pagebox=cropbox, 355.33452pt x 192.95486pt>
 File: w-sin.pdf Graphic file (type pdf)
 <use w-sin.pdf>
-Package pdftex.def Info: w-sin.pdf  used on input line 593. on input line 593.
+Package pdftex.def Info: w-sin.pdf  used on input line 594. on input line 594.
 Package pdftex.def Info: Requested size: 237.0141pt x 128.70496pt on input line
- 593.
+ 594.
 <phi-sin.pdf, id=155, pagebox=cropbox, 355.33452pt x 192.95486pt>
 File: phi-sin.pdf Graphic file (type pdf)
 <use phi-sin.pdf>
-Package pdftex.def Info: phi-sin.pdf  used on input line 599. on input line 599
+Package pdftex.def Info: phi-sin.pdf  used on input line 600. on input line 600
 .
 Package pdftex.def Info: Requested size: 237.0141pt x 128.70496pt on input line
- 599.
+ 600.
 <M-sin.pdf, id=156, pagebox=cropbox, 355.33452pt x 192.95486pt>
 File: M-sin.pdf Graphic file (type pdf)
 <use M-sin.pdf>
-Package pdftex.def Info: M-sin.pdf  used on input line 605. on input line 605.
+Package pdftex.def Info: M-sin.pdf  used on input line 606. on input line 606.
 Package pdftex.def Info: Requested size: 237.0141pt x 128.70496pt on input line
- 605.
+ 606.
 <Q-sin.pdf, id=157, pagebox=cropbox, 355.33452pt x 192.95486pt>
 File: Q-sin.pdf Graphic file (type pdf)
 <use Q-sin.pdf>
-Package pdftex.def Info: Q-sin.pdf  used on input line 611. on input line 611.
+Package pdftex.def Info: Q-sin.pdf  used on input line 612. on input line 612.
 Package pdftex.def Info: Requested size: 237.0141pt x 128.70496pt on input line
- 611.
+ 612.
 <slenderness_w.pdf, id=158, pagebox=cropbox, 355.33452pt x 198.93924pt>
 File: slenderness_w.pdf Graphic file (type pdf)
 <use slenderness_w.pdf>
-Package pdftex.def Info: slenderness_w.pdf  used on input line 626. on input li
-ne 626.
+Package pdftex.def Info: slenderness_w.pdf  used on input line 627. on input li
+ne 627.
 Package pdftex.def Info: Requested size: 237.0141pt x 132.69664pt on input line
- 626.
+ 627.
 <slenderness_phi.pdf, id=159, pagebox=cropbox, 355.33452pt x 194.06602pt>
 File: slenderness_phi.pdf Graphic file (type pdf)
 <use slenderness_phi.pdf>
-Package pdftex.def Info: slenderness_phi.pdf  used on input line 632. on input 
-line 632.
+Package pdftex.def Info: slenderness_phi.pdf  used on input line 633. on input 
+line 633.
 Package pdftex.def Info: Requested size: 237.0141pt x 129.4461pt on input line 
-632.
+633.
 <slenderness_M.pdf, id=160, pagebox=cropbox, 355.33452pt x 195.17918pt>
 File: slenderness_M.pdf Graphic file (type pdf)
 <use slenderness_M.pdf>
-Package pdftex.def Info: slenderness_M.pdf  used on input line 638. on input li
-ne 638.
+Package pdftex.def Info: slenderness_M.pdf  used on input line 639. on input li
+ne 639.
 Package pdftex.def Info: Requested size: 237.0141pt x 130.18861pt on input line
- 638.
+ 639.
 <slenderness_Q.pdf, id=161, pagebox=cropbox, 355.33452pt x 194.06602pt>
 File: slenderness_Q.pdf Graphic file (type pdf)
 <use slenderness_Q.pdf>
-Package pdftex.def Info: slenderness_Q.pdf  used on input line 644. on input li
-ne 644.
+Package pdftex.def Info: slenderness_Q.pdf  used on input line 645. on input li
+ne 645.
 Package pdftex.def Info: Requested size: 237.0141pt x 129.4461pt on input line 
-644.
+645.
  [12 <./beam_load.pdf>] [13 <./w-sin.pdf> <./phi-sin.pdf> <./M-sin.pdf> <./Q-si
 n.pdf> <./slenderness_w.pdf> <./slenderness_phi.pdf> <./slenderness_M.pdf> <./s
 lenderness_Q.pdf>] [14] [15]
@@ -1531,140 +1531,140 @@ Missing character: There is no Ω in font cmr10!
 <annular.pdf, id=365, pagebox=cropbox, 144.04414pt x 148.37634pt>
 File: annular.pdf Graphic file (type pdf)
 <use annular.pdf>
-Package pdftex.def Info: annular.pdf  used on input line 816. on input line 816
+Package pdftex.def Info: annular.pdf  used on input line 815. on input line 815
 .
 Package pdftex.def Info: Requested size: 241.84842pt x 249.14374pt on input lin
-e 816.
+e 815.
 <mesh_hole_0.pdf, id=366, pagebox=cropbox, 1150.29051pt x 1150.29051pt>
 File: mesh_hole_0.pdf Graphic file (type pdf)
 <use mesh_hole_0.pdf>
-Package pdftex.def Info: mesh_hole_0.pdf  used on input line 854. on input line
- 854.
+Package pdftex.def Info: mesh_hole_0.pdf  used on input line 853. on input line
+ 853.
 Package pdftex.def Info: Requested size: 87.06187pt x 87.0579pt on input line 8
-54.
+53.
 <mesh_hole_1.pdf, id=367, pagebox=cropbox, 1150.29051pt x 1150.29051pt>
 File: mesh_hole_1.pdf Graphic file (type pdf)
 <use mesh_hole_1.pdf>
-Package pdftex.def Info: mesh_hole_1.pdf  used on input line 858. on input line
- 858.
+Package pdftex.def Info: mesh_hole_1.pdf  used on input line 857. on input line
+ 857.
 Package pdftex.def Info: Requested size: 87.06187pt x 87.0579pt on input line 8
-58.
+57.
 <mesh_hole_2.pdf, id=368, pagebox=cropbox, 1150.29051pt x 1150.29051pt>
 File: mesh_hole_2.pdf Graphic file (type pdf)
 <use mesh_hole_2.pdf>
-Package pdftex.def Info: mesh_hole_2.pdf  used on input line 862. on input line
- 862.
+Package pdftex.def Info: mesh_hole_2.pdf  used on input line 861. on input line
+ 861.
 Package pdftex.def Info: Requested size: 87.06187pt x 87.0579pt on input line 8
-62.
+61.
 <mesh_hole_3.pdf, id=369, pagebox=cropbox, 1150.29051pt x 1150.29051pt>
 File: mesh_hole_3.pdf Graphic file (type pdf)
 <use mesh_hole_3.pdf>
-Package pdftex.def Info: mesh_hole_3.pdf  used on input line 866. on input line
- 866.
+Package pdftex.def Info: mesh_hole_3.pdf  used on input line 865. on input line
+ 865.
 Package pdftex.def Info: Requested size: 87.06187pt x 87.0579pt on input line 8
-66.
+65.
 <mesh_hole_4.pdf, id=370, pagebox=cropbox, 1150.29051pt x 1150.29051pt>
 File: mesh_hole_4.pdf Graphic file (type pdf)
 <use mesh_hole_4.pdf>
-Package pdftex.def Info: mesh_hole_4.pdf  used on input line 870. on input line
- 870.
+Package pdftex.def Info: mesh_hole_4.pdf  used on input line 869. on input line
+ 869.
 Package pdftex.def Info: Requested size: 87.06187pt x 87.0579pt on input line 8
-70.
+69.
 <beta_p_2.pdf, id=371, pagebox=cropbox, 237.97708pt x 192.95486pt>
 File: beta_p_2.pdf Graphic file (type pdf)
 <use beta_p_2.pdf>
-Package pdftex.def Info: beta_p_2.pdf  used on input line 882. on input line 88
-2.
+Package pdftex.def Info: beta_p_2.pdf  used on input line 881. on input line 88
+1.
 Package pdftex.def Info: Requested size: 149.94482pt x 121.57986pt on input lin
-e 882.
+e 881.
 <beta_p_3.pdf, id=372, pagebox=cropbox, 237.97708pt x 192.95486pt>
 File: beta_p_3.pdf Graphic file (type pdf)
 <use beta_p_3.pdf>
-Package pdftex.def Info: beta_p_3.pdf  used on input line 886. on input line 88
-6.
+Package pdftex.def Info: beta_p_3.pdf  used on input line 885. on input line 88
+5.
 Package pdftex.def Info: Requested size: 149.94482pt x 121.57986pt on input lin
-e 886.
+e 885.
 <beta_p_4.pdf, id=373, pagebox=cropbox, 237.97708pt x 192.95486pt>
 File: beta_p_4.pdf Graphic file (type pdf)
 <use beta_p_4.pdf>
-Package pdftex.def Info: beta_p_4.pdf  used on input line 890. on input line 89
-0.
+Package pdftex.def Info: beta_p_4.pdf  used on input line 889. on input line 88
+9.
 Package pdftex.def Info: Requested size: 149.94482pt x 121.57986pt on input lin
-e 890.
+e 889.
  [16]
 <Cook_s.pdf, id=377, pagebox=cropbox, 228.40532pt x 204.5823pt>
 File: Cook_s.pdf Graphic file (type pdf)
 <use Cook_s.pdf>
-Package pdftex.def Info: Cook_s.pdf  used on input line 904. on input line 904.
+Package pdftex.def Info: Cook_s.pdf  used on input line 903. on input line 903.
 
 Package pdftex.def Info: Requested size: 241.84842pt x 216.63457pt on input lin
-e 904.
+e 903.
  [17 <./annular.pdf> <./mesh_hole_0.pdf> <./mesh_hole_1.pdf> <./mesh_hole_2.pdf
 > <./mesh_hole_3.pdf> <./mesh_hole_4.pdf> <./beta_p_2.pdf> <./beta_p_3.pdf> <./
 beta_p_4.pdf>]
 <mesh_cook_0.pdf, id=463, pagebox=cropbox, 1377.91289pt x 1719.34546pt>
 File: mesh_cook_0.pdf Graphic file (type pdf)
 <use mesh_cook_0.pdf>
-Package pdftex.def Info: mesh_cook_0.pdf  used on input line 914. on input line
- 914.
+Package pdftex.def Info: mesh_cook_0.pdf  used on input line 913. on input line
+ 913.
 Package pdftex.def Info: Requested size: 87.06187pt x 108.61316pt on input line
- 914.
+ 913.
 <mesh_cook_1.pdf, id=464, pagebox=cropbox, 1377.91289pt x 1719.34546pt>
 File: mesh_cook_1.pdf Graphic file (type pdf)
 <use mesh_cook_1.pdf>
-Package pdftex.def Info: mesh_cook_1.pdf  used on input line 918. on input line
- 918.
+Package pdftex.def Info: mesh_cook_1.pdf  used on input line 917. on input line
+ 917.
 Package pdftex.def Info: Requested size: 87.06187pt x 108.61316pt on input line
- 918.
+ 917.
 <mesh_cook_2.pdf, id=465, pagebox=cropbox, 1377.91289pt x 1719.34546pt>
 File: mesh_cook_2.pdf Graphic file (type pdf)
 <use mesh_cook_2.pdf>
-Package pdftex.def Info: mesh_cook_2.pdf  used on input line 922. on input line
- 922.
+Package pdftex.def Info: mesh_cook_2.pdf  used on input line 921. on input line
+ 921.
 Package pdftex.def Info: Requested size: 87.06187pt x 108.61316pt on input line
- 922.
+ 921.
 <mesh_cook_3.pdf, id=466, pagebox=cropbox, 1377.91289pt x 1719.34546pt>
 File: mesh_cook_3.pdf Graphic file (type pdf)
 <use mesh_cook_3.pdf>
-Package pdftex.def Info: mesh_cook_3.pdf  used on input line 926. on input line
- 926.
+Package pdftex.def Info: mesh_cook_3.pdf  used on input line 925. on input line
+ 925.
 Package pdftex.def Info: Requested size: 87.06187pt x 108.61316pt on input line
- 926.
+ 925.
 <mesh_cook_4.pdf, id=467, pagebox=cropbox, 1377.91289pt x 1719.34546pt>
 File: mesh_cook_4.pdf Graphic file (type pdf)
 <use mesh_cook_4.pdf>
-Package pdftex.def Info: mesh_cook_4.pdf  used on input line 930. on input line
- 930.
+Package pdftex.def Info: mesh_cook_4.pdf  used on input line 929. on input line
+ 929.
 Package pdftex.def Info: Requested size: 87.06187pt x 108.61316pt on input line
- 930.
+ 929.
 <Cook's_membrane_Q1.pdf, id=468, pagebox=cropbox, 348.09448pt x 213.57591pt>
 File: Cook's_membrane_Q1.pdf Graphic file (type pdf)
 <use Cook's_membrane_Q1.pdf>
-Package pdftex.def Info: Cook's_membrane_Q1.pdf  used on input line 939. on inp
-ut line 939.
+Package pdftex.def Info: Cook's_membrane_Q1.pdf  used on input line 938. on inp
+ut line 938.
 Package pdftex.def Info: Requested size: 386.95894pt x 237.4403pt on input line
- 939.
+ 938.
 <Cook's_membrane_Q2.pdf, id=469, pagebox=cropbox, 348.09448pt x 213.57793pt>
 File: Cook's_membrane_Q2.pdf Graphic file (type pdf)
 <use Cook's_membrane_Q2.pdf>
-Package pdftex.def Info: Cook's_membrane_Q2.pdf  used on input line 944. on inp
-ut line 944.
+Package pdftex.def Info: Cook's_membrane_Q2.pdf  used on input line 943. on inp
+ut line 943.
 Package pdftex.def Info: Requested size: 386.95894pt x 237.44255pt on input lin
-e 944.
+e 943.
 <Cook's_membrane_Q3.pdf, id=470, pagebox=cropbox, 348.09448pt x 213.57591pt>
 File: Cook's_membrane_Q3.pdf Graphic file (type pdf)
 <use Cook's_membrane_Q3.pdf>
-Package pdftex.def Info: Cook's_membrane_Q3.pdf  used on input line 951. on inp
-ut line 951.
+Package pdftex.def Info: Cook's_membrane_Q3.pdf  used on input line 950. on inp
+ut line 950.
 Package pdftex.def Info: Requested size: 386.95894pt x 237.4403pt on input line
- 951.
+ 950.
 <Cook's_membrane_Q4.pdf, id=471, pagebox=cropbox, 348.09448pt x 213.57693pt>
 File: Cook's_membrane_Q4.pdf Graphic file (type pdf)
 <use Cook's_membrane_Q4.pdf>
-Package pdftex.def Info: Cook's_membrane_Q4.pdf  used on input line 956. on inp
-ut line 956.
+Package pdftex.def Info: Cook's_membrane_Q4.pdf  used on input line 955. on inp
+ut line 955.
 Package pdftex.def Info: Requested size: 386.95894pt x 237.44144pt on input lin
-e 956.
+e 955.
  [18 <./Cook_s.pdf> <./mesh_cook_0.pdf> <./mesh_cook_1.pdf> <./mesh_cook_2.pdf>
  <./mesh_cook_3.pdf> <./mesh_cook_4.pdf>] [19 <./Cook's_membrane_Q1.pdf> <./Coo
 k's_membrane_Q2.pdf>] [20 <./Cook's_membrane_Q3.pdf> <./Cook's_membrane_Q4.pdf>
@@ -1672,87 +1672,87 @@ k's_membrane_Q2.pdf>] [20 <./Cook's_membrane_Q3.pdf> <./Cook's_membrane_Q4.pdf>
 <Platewithhole.pdf, id=574, pagebox=cropbox, 199.64186pt x 125.59221pt>
 File: Platewithhole.pdf Graphic file (type pdf)
 <use Platewithhole.pdf>
-Package pdftex.def Info: Platewithhole.pdf  used on input line 978. on input li
-ne 978.
+Package pdftex.def Info: Platewithhole.pdf  used on input line 977. on input li
+ne 977.
 Package pdftex.def Info: Requested size: 241.84842pt x 152.14333pt on input lin
-e 978.
+e 977.
 <Platewithhole_b.pdf, id=575, pagebox=cropbox, 144.04414pt x 148.37634pt>
 File: Platewithhole_b.pdf Graphic file (type pdf)
 <use Platewithhole_b.pdf>
-Package pdftex.def Info: Platewithhole_b.pdf  used on input line 985. on input 
-line 985.
+Package pdftex.def Info: Platewithhole_b.pdf  used on input line 984. on input 
+line 984.
 Package pdftex.def Info: Requested size: 241.84842pt x 249.14374pt on input lin
-e 985.
+e 984.
 
-Overfull \hbox (4.44443pt too wide) in paragraph at lines 976--989
+Overfull \hbox (4.44443pt too wide) in paragraph at lines 975--988
  [][]  [] 
  []
 
 <deformation_p_2.pdf, id=576, pagebox=cropbox, 238.37256pt x 201.30305pt>
 File: deformation_p_2.pdf Graphic file (type pdf)
 <use deformation_p_2.pdf>
-Package pdftex.def Info: deformation_p_2.pdf  used on input line 999. on input 
-line 999.
+Package pdftex.def Info: deformation_p_2.pdf  used on input line 998. on input 
+line 998.
 Package pdftex.def Info: Requested size: 149.94482pt x 126.63113pt on input lin
-e 999.
+e 998.
 <deformation_p_3.pdf, id=577, pagebox=cropbox, 238.37256pt x 201.30305pt>
 File: deformation_p_3.pdf Graphic file (type pdf)
 <use deformation_p_3.pdf>
-Package pdftex.def Info: deformation_p_3.pdf  used on input line 999. on input 
-line 999.
+Package pdftex.def Info: deformation_p_3.pdf  used on input line 998. on input 
+line 998.
 Package pdftex.def Info: Requested size: 149.94482pt x 126.63113pt on input lin
-e 999.
+e 998.
 <deformation_p_4.pdf, id=578, pagebox=cropbox, 238.37256pt x 201.30305pt>
 File: deformation_p_4.pdf Graphic file (type pdf)
 <use deformation_p_4.pdf>
-Package pdftex.def Info: deformation_p_4.pdf  used on input line 999. on input 
-line 999.
+Package pdftex.def Info: deformation_p_4.pdf  used on input line 998. on input 
+line 998.
 Package pdftex.def Info: Requested size: 149.94482pt x 126.63113pt on input lin
-e 999.
+e 998.
 <stress_p_2.pdf, id=579, pagebox=cropbox, 238.14972pt x 195.32573pt>
 File: stress_p_2.pdf Graphic file (type pdf)
 <use stress_p_2.pdf>
-Package pdftex.def Info: stress_p_2.pdf  used on input line 1000. on input line
- 1000.
+Package pdftex.def Info: stress_p_2.pdf  used on input line 999. on input line 
+999.
 Package pdftex.def Info: Requested size: 149.94482pt x 122.98431pt on input lin
-e 1000.
+e 999.
 <stress_p_3.pdf, id=580, pagebox=cropbox, 238.14972pt x 192.95486pt>
 File: stress_p_3.pdf Graphic file (type pdf)
 <use stress_p_3.pdf>
-Package pdftex.def Info: stress_p_3.pdf  used on input line 1000. on input line
- 1000.
+Package pdftex.def Info: stress_p_3.pdf  used on input line 999. on input line 
+999.
 Package pdftex.def Info: Requested size: 149.94482pt x 121.49155pt on input lin
-e 1000.
+e 999.
 <stress_p_4.pdf, id=581, pagebox=cropbox, 238.14972pt x 192.95486pt>
 File: stress_p_4.pdf Graphic file (type pdf)
 <use stress_p_4.pdf>
-Package pdftex.def Info: stress_p_4.pdf  used on input line 1000. on input line
- 1000.
+Package pdftex.def Info: stress_p_4.pdf  used on input line 999. on input line 
+999.
 Package pdftex.def Info: Requested size: 149.94482pt x 121.49155pt on input lin
-e 1000.
+e 999.
 <energy_p_2.pdf, id=582, pagebox=cropbox, 238.37256pt x 192.95486pt>
 File: energy_p_2.pdf Graphic file (type pdf)
 <use energy_p_2.pdf>
-Package pdftex.def Info: energy_p_2.pdf  used on input line 1001. on input line
- 1001.
+Package pdftex.def Info: energy_p_2.pdf  used on input line 1000. on input line
+ 1000.
 Package pdftex.def Info: Requested size: 149.94482pt x 121.37965pt on input lin
-e 1001.
+e 1000.
 <energy_p_3.pdf, id=583, pagebox=cropbox, 238.37256pt x 192.95486pt>
 File: energy_p_3.pdf Graphic file (type pdf)
 <use energy_p_3.pdf>
-Package pdftex.def Info: energy_p_3.pdf  used on input line 1001. on input line
- 1001.
+Package pdftex.def Info: energy_p_3.pdf  used on input line 1000. on input line
+ 1000.
 Package pdftex.def Info: Requested size: 149.94482pt x 121.37965pt on input lin
-e 1001.
+e 1000.
 <energy_p_4.pdf, id=584, pagebox=cropbox, 238.37256pt x 192.95486pt>
 File: energy_p_4.pdf Graphic file (type pdf)
 <use energy_p_4.pdf>
-Package pdftex.def Info: energy_p_4.pdf  used on input line 1001. on input line
- 1001.
+Package pdftex.def Info: energy_p_4.pdf  used on input line 1000. on input line
+ 1000.
 Package pdftex.def Info: Requested size: 149.94482pt x 121.37965pt on input lin
-e 1001.
+e 1000.
 
-Overfull \hbox (2.13763pt too wide) in paragraph at lines 998--1003
+Overfull \hbox (2.13763pt too wide) in paragraph at lines 997--1002
  [] 
  []
 
@@ -1762,72 +1762,72 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <no_stress_contour.pdf, id=585, pagebox=cropbox, 127.50235pt x 127.50235pt>
 File: no_stress_contour.pdf Graphic file (type pdf)
 <use no_stress_contour.pdf>
-Package pdftex.def Info: no_stress_contour.pdf  used on input line 1011. on inp
-ut line 1011.
+Package pdftex.def Info: no_stress_contour.pdf  used on input line 1010. on inp
+ut line 1010.
 Package pdftex.def Info: Requested size: 193.47577pt x 193.4787pt on input line
- 1011.
+ 1010.
 <g_stress_contour.pdf, id=586, pagebox=cropbox, 127.50235pt x 127.50235pt>
 File: g_stress_contour.pdf Graphic file (type pdf)
 <use g_stress_contour.pdf>
-Package pdftex.def Info: g_stress_contour.pdf  used on input line 1011. on inpu
-t line 1011.
+Package pdftex.def Info: g_stress_contour.pdf  used on input line 1010. on inpu
+t line 1010.
 Package pdftex.def Info: Requested size: 193.47577pt x 193.4787pt on input line
- 1011.
+ 1010.
 <s_stress_contour.pdf, id=587, pagebox=cropbox, 127.50235pt x 127.50235pt>
 File: s_stress_contour.pdf Graphic file (type pdf)
 <use s_stress_contour.pdf>
-Package pdftex.def Info: s_stress_contour.pdf  used on input line 1013. on inpu
-t line 1013.
+Package pdftex.def Info: s_stress_contour.pdf  used on input line 1012. on inpu
+t line 1012.
 Package pdftex.def Info: Requested size: 193.47577pt x 193.4787pt on input line
- 1013.
+ 1012.
 <ns_stress_contour.pdf, id=588, pagebox=cropbox, 127.50235pt x 127.50235pt>
 File: ns_stress_contour.pdf Graphic file (type pdf)
 <use ns_stress_contour.pdf>
-Package pdftex.def Info: ns_stress_contour.pdf  used on input line 1013. on inp
-ut line 1013.
+Package pdftex.def Info: ns_stress_contour.pdf  used on input line 1012. on inp
+ut line 1012.
 Package pdftex.def Info: Requested size: 193.47577pt x 193.4787pt on input line
- 1013.
+ 1012.
 <reference_stress_contour.pdf, id=589, pagebox=cropbox, 127.50235pt x 127.50235
 pt>
 File: reference_stress_contour.pdf Graphic file (type pdf)
 <use reference_stress_contour.pdf>
-Package pdftex.def Info: reference_stress_contour.pdf  used on input line 1015.
- on input line 1015.
+Package pdftex.def Info: reference_stress_contour.pdf  used on input line 1014.
+ on input line 1014.
 Package pdftex.def Info: Requested size: 193.47577pt x 193.4787pt on input line
- 1015.
+ 1014.
 <legend.pdf, id=590, pagebox=cropbox, 50.42137pt x 150.5615pt>
 File: legend.pdf Graphic file (type pdf)
 <use legend.pdf>
-Package pdftex.def Info: legend.pdf  used on input line 1015. on input line 101
-5.
+Package pdftex.def Info: legend.pdf  used on input line 1014. on input line 101
+4.
 Package pdftex.def Info: Requested size: 67.71725pt x 202.23608pt on input line
- 1015.
+ 1014.
 <no.pdf, id=591, pagebox=cropbox, 167.1304pt x 153.86383pt>
 File: no.pdf Graphic file (type pdf)
 <use no.pdf>
-Package pdftex.def Info: no.pdf  used on input line 1025. on input line 1025.
+Package pdftex.def Info: no.pdf  used on input line 1024. on input line 1024.
 Package pdftex.def Info: Requested size: 212.82779pt x 195.93782pt on input lin
-e 1025.
+e 1024.
 <g.pdf, id=592, pagebox=cropbox, 190.08818pt x 153.86383pt>
 File: g.pdf Graphic file (type pdf)
 <use g.pdf>
-Package pdftex.def Info: g.pdf  used on input line 1025. on input line 1025.
+Package pdftex.def Info: g.pdf  used on input line 1024. on input line 1024.
 Package pdftex.def Info: Requested size: 241.84842pt x 195.76878pt on input lin
-e 1025.
+e 1024.
 <s.pdf, id=593, pagebox=cropbox, 190.08818pt x 153.86383pt>
 File: s.pdf Graphic file (type pdf)
 <use s.pdf>
-Package pdftex.def Info: s.pdf  used on input line 1027. on input line 1027.
+Package pdftex.def Info: s.pdf  used on input line 1026. on input line 1026.
 Package pdftex.def Info: Requested size: 241.84842pt x 195.76878pt on input lin
-e 1027.
+e 1026.
 <ns.pdf, id=594, pagebox=cropbox, 190.08818pt x 153.86383pt>
 File: ns.pdf Graphic file (type pdf)
 <use ns.pdf>
-Package pdftex.def Info: ns.pdf  used on input line 1027. on input line 1027.
+Package pdftex.def Info: ns.pdf  used on input line 1026. on input line 1026.
 Package pdftex.def Info: Requested size: 241.84842pt x 195.76878pt on input lin
-e 1027.
+e 1026.
 
-Overfull \hbox (24.0pt too wide) in paragraph at lines 1024--1030
+Overfull \hbox (24.0pt too wide) in paragraph at lines 1023--1029
  [] 
  []
 
@@ -1850,10 +1850,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 29448 strings out of 492990
- 609942 string characters out of 6132637
- 686186 words of memory out of 5000000
- 32358 multiletter control sequences out of 15000+600000
+ 29450 strings out of 492990
+ 609974 string characters out of 6132637
+ 686204 words of memory out of 5000000
+ 32360 multiletter control sequences out of 15000+600000
  559411 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,25n,77p,10365b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1885,7 +1885,7 @@ st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2017/texmf-dist
 fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2017/texmf-dis
 t/fonts/type1/public/cm-super/sfrm0800.pfb>
-Output written on projection1120.pdf (26 pages, 2407195 bytes).
+Output written on projection1120.pdf (26 pages, 2407254 bytes).
 PDF statistics:
  1010 PDF objects out of 1200 (max. 8388607)
  838 compressed objects within 9 object streams
